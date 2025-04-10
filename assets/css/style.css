@@ -7,6 +7,12 @@
   --primary-font: "Trade Winds", sans-serif;
   --secondary-font: "Sriracha", sans-serif;
   --tertiary-font: "Roboto", sans-serif;
+  --black-color: #232c37; /*light black*/
+  --brown-color: #5e4c4f; /*brown*/
+  --orange-color: #aa4933; /*dark orange*/
+  --blue-color: #7c90ab; /*light blue*/
+  --gray-color: #5d7286; /*light gray*/
+  --gold-color: #f9bc66; /*gold*/
 }
 
 /* Global styles */
@@ -14,6 +20,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+
+  h1, h3 {
+    font-family: var(--primary-font);
+    color: var(--black-color);
   }
 
   body {
@@ -27,9 +38,27 @@
   }
 
   #quiz-container {
-    height: 70vh;
+    height: 80vh;
     width: 60%;
     background-color: white;
     padding: 40px;
     border-radius: 15px;
   }
+
+  .btn-topicImg {
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-topicImg:hover {
+    border: 5px solid var(--orange-color);
+  }
+
+  .btn-topicImg img {
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+    
+  }
+
+  
