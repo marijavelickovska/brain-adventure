@@ -1,9 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+                let quizTopic = this.getAttribute("data-type");
+                startQuiz(quizTopic);
+                console.log(quizTopic);
+            
+        });
+    }
 
     
 
+    //startQuiz(quizTopic);
 
 });
+
+
 
 // Separate objects for each topic, each containing 15 questions
 const geographyQuiz = [
@@ -238,3 +251,13 @@ const geographyQuiz = [
     }
   ];
   
+
+
+
+function changeContent() {
+
+}
+
+function startQuiz() {
+
+}
