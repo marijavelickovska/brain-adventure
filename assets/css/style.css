@@ -8,3 +8,28 @@
   --secondary-font: "Sriracha", sans-serif;
   --tertiary-font: "Roboto", sans-serif;
 }
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    background-image: url('../images/library.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #quiz-container {
+    height: 70vh;
+    width: 60%;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+  }
