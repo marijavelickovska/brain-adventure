@@ -27,8 +27,8 @@
 </head>
 
 <body>
-
-    <div id="quiz-container" class="container">
+    <!-- Topic container with clickable images for choosing the quiz topic-->
+    <div id="topic-container" class="container">
         <div class="row justify-content-center text-center">
             <div class="col-12">
                 <h1 class="display-3">Brain Adventure</h1>
@@ -37,12 +37,14 @@
         </div>
         <div class="row justify-content-center text-center mt-5">
             <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-                <button data-type="geography" class="btn-topicImg"><img src="assets/images/geography.webp" alt="Geography quiz button">
+                <button data-type="geography" class="btn-topicImg"><img src="assets/images/geography.webp"
+                        alt="Geography quiz button">
                     <h4>GEOGRAPHY</h4>
                 </button>
             </div>
             <div class="col-12 col-sm-6 col-md-5 col-lg-4">
-                <button data-type="history" class="btn-topicImg"><img src="assets/images/history.webp" alt="History quiz button">
+                <button data-type="history" class="btn-topicImg"><img src="assets/images/history.webp"
+                        alt="History quiz button">
                     <h4>HISTORY</h4>
                 </button>
             </div>
@@ -55,7 +57,17 @@
     </div>
 
 
-    <!-- Modal window is taken from Bootstrap for confirmation on selected topic -->
+    <!-- Quiz container -->
+    <div id="quiz-container" class="container-fluid">Hellloooo
+        <div id="question" class="row">Helloooo</div>
+        <div id="answers" class="row"></div>
+        <div id="quiz-progress" class="row"></div>
+    </div>
+
+
+
+    <!-- Modal appears on click of the images, for confirmation to start the quiz -->
+    <!-- Modal window is taken from Bootstrap -->
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">

@@ -1,28 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const quizContainer = document.getElementById("quiz-container").style.display = 'none';
     let buttons = document.getElementsByTagName("button");
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-    
+
 
 
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let quizTopic = this.getAttribute("data-type");
-
-            //startQuiz(quizTopic);
             //console.log(quizTopic);
 
-            
-            document.querySelector('.modal-body').innerHTML = `<span>You chose ${quizTopic}. Ready to start?</span>`;
+            document.querySelector(".modal-body").innerHTML = `<span>You chose ${quizTopic}. Ready to start?</span>`;
             modal.show();
-
-
-
+            document.getElementById("confirmBtn").addEventListener("click", function () {
+                changeContent();
+                modal.hide();
+                //startQuiz(quizTopic);
+            });
         });
     }
 
 
-
-    //startQuiz(quizTopic);
 
 });
 
@@ -262,7 +260,8 @@ const mathQuiz = [{
 
 
 function changeContent() {
-
+    const topicContainer = document.getElementById("topic-container").style.display = "none";
+    const quizContainer = document.getElementById("quiz-container").style.display = "block";
 }
 
 function startQuiz(quizTopic) {
