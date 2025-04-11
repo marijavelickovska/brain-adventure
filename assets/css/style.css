@@ -50,11 +50,13 @@
   }
 
   #quiz-container h4 {
-    margin-top: 0.3rem;
-    margin-bottom: 2.3rem;
+    /*margin-top: 0.7rem;     in case h4 is outside the button
+    margin-bottom: 2.3rem;*/
     color: var(--beige-color);
     background-color: var(--brown-color);
     padding: 10px 5px;
+    margin-bottom: 0;
+    cursor: pointer;
     /*display: inline-block;*/
   }
 
@@ -65,6 +67,7 @@
   .btn-topicImg {
     border: none;
     cursor: pointer;
+    margin-bottom: 1rem;
   }
 
   .btn-topicImg:hover {
@@ -72,9 +75,26 @@
   }
 
   .btn-topicImg img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     object-fit: cover;
+    
+  }
+
+  .btn-modal {
+    background-color: #435b76;
+    color: wheat;
+  }
+
+  .btn-modal:hover {
+    border: 2px solid var(--gray-color);
+  }
+
+  .modal span {
+    font-family: var(--tertiary-font);
+    font-size: 1.2rem;
+    color: var(--black-color);
+    padding: 0;
     
   }
 
@@ -90,7 +110,7 @@
       }
 
       .btn-topicImg img {
-        width: 200px;
+        width: 230px;
         height: 230px;
       }
    
