@@ -69,6 +69,7 @@
     border: none;
     cursor: pointer;
     margin-bottom: 1rem;
+    box-shadow: 5px 10px 15px var(--black-color);
   }
 
   .btn-topicImg:hover {
