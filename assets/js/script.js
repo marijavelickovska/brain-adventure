@@ -8,14 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let quizTopic = this.getAttribute("data-type");
-            //console.log(quizTopic);
+            console.log(quizTopic);
 
             document.querySelector(".modal-body").innerHTML = `<span>You chose ${quizTopic}. Ready to start?</span>`;
             modal.show();
+
             document.getElementById("confirmBtn").addEventListener("click", function () {
-                changeContent();
+                console.log(quizTopic);
                 modal.hide();
-                //startQuiz(quizTopic);
+                changeContent();
+                startQuiz(quizTopic);
             });
         });
     }
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Separate objects for each topic, each containing 15 questions
-const geographyQuiz = [{
+const geography = [{
         question: "What is the capital of Canada?",
         answers: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
         correct: "Ottawa"
@@ -103,7 +105,7 @@ const geographyQuiz = [{
         correct: "Nigeria"
     }
 ];
-const historyQuiz = [{
+const history = [{
         question: "Who was the first president of the United States?",
         answers: ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "John Adams"],
         correct: "George Washington"
@@ -179,7 +181,7 @@ const historyQuiz = [{
         correct: "Pompeii"
     }
 ];
-const mathQuiz = [{
+const math = [{
         question: "What is the square root of 64?",
         answers: ["6", "7", "8", "9"],
         correct: "8"
@@ -265,6 +267,26 @@ function changeContent() {
 }
 
 function startQuiz(quizTopic) {
+    let questionElement = document.getElementById("question");
+    let answersElement = document.getElementById("answers");
+    let quizProgressElement = document.getElementById("quiz-progress");
 
+    let currentIndex = 0;
+
+
+    //getAttribute("data-type") returns a string like "quizTopic" 
+    //Code to convert a string value to variable 
+    let topic;
+
+    if (quizTopic === "geography") {
+        topic = geography;
+    } else if (quizTopic === "history") {
+        topic = history;
+    } else if (quizTopic === "math") {
+        topic = math;
+    }
+
+    let question = topic[currentIndex].question;
+    console.log(question);
 
 }
