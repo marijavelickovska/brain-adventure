@@ -287,6 +287,21 @@ function startQuiz(quizTopic) {
     }
 
     let question = topic[currentIndex].question;
-    console.log(question);
+    questionElement.innerHTML = `<div class="col-12">
+                                    <h2>${question}</h2>
+                                </div>`;
+
+
+    let answers = topic[currentIndex].answers;
+    console.log(answers);   
+   
+    for (let answer of answers) {
+        let button = document.createElement("button");
+        button.classList.add("answer-btn");
+        button.innerText = answer;
+        console.log(button);
+        answersElement.appendChild(button);
+    }                        
+
 
 }
