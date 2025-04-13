@@ -1,7 +1,6 @@
 /* Google fonts import */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&family=Trade+Winds&display=swap");
 
-
 /* CSS Variables */
 :root {
   --primary-font: "Trade Winds", sans-serif;
@@ -18,98 +17,109 @@
 
 /* Global styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h1, h2, h3, h4 {
-    font-family: var(--primary-font);
-    color: var(--gray-color);
-  }
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--primary-font);
+  color: var(--gray-color);
+}
 
-  body {
-    min-height: 100vh;
-    overflow-y: auto;
-    background-image: url('../images/library.webp');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  background-image: url("../images/library.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  #topic-container,
-  #quiz-container {
-    min-height: 90vh;
-    overflow-y: auto;
-    width: 80%;
-    background-color: white;
-    padding: 40px;
-    border-radius: 15px;
-  }
+#topic-container,
+#quiz-container {
+  min-height: 90vh;
+  overflow-y: auto;
+  width: 80%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+}
 
-  /* Topic container */
-  #topic-container h4 {
-    /*margin-top: 0.7rem;     in case h4 is outside the button
+/* Topic container */
+#topic-container h4 {
+  /*margin-top: 0.7rem;     in case h4 is outside the button
     margin-bottom: 2.3rem;*/
-    color: var(--beige-color);
-    background-color: var(--brown-color);
-    padding: 10px 5px;
-    margin-bottom: 0;
-    cursor: pointer;
-    /*display: inline-block;*/
-  }
+  color: var(--beige-color);
+  background-color: var(--brown-color);
+  padding: 10px 5px;
+  margin-bottom: 0;
+  cursor: pointer;
+  /*display: inline-block;*/
+}
 
-  #topic-container h4:hover {
-    color: var(--orange-color);
-  }
+#topic-container h4:hover {
+  color: var(--orange-color);
+}
 
-  .btn-topicImg {
-    border: none;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    box-shadow: 5px 10px 15px var(--black-color);
-  }
+.btn-topicImg {
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 5px 10px 15px var(--black-color);
+}
 
-  .btn-topicImg:hover {
-    border: 5px solid var(--orange-color);
-  }
+.btn-topicImg:hover {
+  border: 5px solid var(--orange-color);
+}
 
-  .btn-topicImg img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    
-  }
+.btn-topicImg img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
 
-  .btn-modal {
-    background-color: #435b76;
-    color: wheat;
-  }
+.btn-modal {
+  background-color: #435b76;
+  color: wheat;
+}
 
-  .btn-modal:hover {
-    border: 2px solid var(--gray-color);
-  }
+.btn-modal:hover {
+  border: 2px solid var(--gray-color);
+}
 
-  .modal span {
-    font-family: var(--tertiary-font);
-    font-size: 1.2rem;
-    color: var(--black-color);
-    padding: 0;
-  }
+.modal span {
+  font-family: var(--tertiary-font);
+  font-size: 1.2rem;
+  color: var(--black-color);
+  padding: 0;
+}
 
-  /* Quiz container */ 
-  #quiz-container {
-    display: none;
-  }
+/* Quiz container */
+#quiz-container {
+  display: none;
+}
+
+#question {
+height: 30%;
+}
+
 #answers {
   width: 100%;
-  height: 30vh;
+  height: 40%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
+}
+
+#quiz-progress {
+height: 30%;
 }
 
 .answer-btn {
@@ -123,24 +133,20 @@
   border-radius: 10px;
 }
 
-
 /* Media queries */
- @media screen and (min-width: 992px) {
-    h3 {
-        margin-bottom: 2rem;
-    }
-
-    #topic-container,
-    #quiz-container {
-        height: 70vh;
-        width: 70%;
-      }
-
-      .btn-topicImg img {
-        width: 230px;
-        height: 230px;
-      }
-   
+@media screen and (min-width: 992px) {
+  h3 {
+    margin-bottom: 2rem;
   }
 
-  
+  #topic-container,
+  #quiz-container {
+    height: 70vh;
+    width: 70%;
+  }
+
+  .btn-topicImg img {
+    width: 230px;
+    height: 230px;
+  }
+}
