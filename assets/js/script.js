@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const quizContainer = document.getElementById("quiz-container").style.display = 'none';
     let buttons = document.getElementsByTagName("button");
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
