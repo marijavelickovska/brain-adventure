@@ -262,7 +262,7 @@ const math = [{
 
 function changeContent() {
     const topicContainer = document.getElementById("topic-container").style.display = "none";
-    const quizContainer = document.getElementById("quiz-container").style.display = "block";
+    const quizContainer = document.getElementById("quiz-container").style.display = "flex";
 }
 
 function startQuiz(quizTopic) {
