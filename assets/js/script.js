@@ -3,26 +3,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
 
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let quizTopic = this.getAttribute("data-type");
-            console.log(quizTopic);
 
             document.querySelector(".modal-body").innerHTML = `<span>You chose ${quizTopic}. Ready to start?</span>`;
             modal.show();
 
             document.getElementById("confirmBtn").addEventListener("click", function () {
-                console.log(quizTopic);
                 modal.hide();
-                changeContent();
+                changeContent(quizTopic);
                 startQuiz(quizTopic);
             });
         });
     }
-
-
-
 });
 
 
@@ -258,11 +252,13 @@ const math = [{
 ];
 
 
+function changeContent(quizTopic) {
+    document.getElementById("topic-container").style.display = "none";
+    document.getElementById("quiz-container").style.display = "flex";
+
+    document.body.style.backgroundImage = `url("assets/images/${quizTopic}.webp")`;
 
 
-function changeContent() {
-    const topicContainer = document.getElementById("topic-container").style.display = "none";
-    const quizContainer = document.getElementById("quiz-container").style.display = "flex";
 }
 
 function startQuiz(quizTopic) {
@@ -286,21 +282,14 @@ function startQuiz(quizTopic) {
     }
 
     let question = topic[currentIndex].question;
-    questionElement.innerHTML = `<div class="col-12">
-                                    <h2>${question}</h2>
-                                </div>`;
-
+    questionElement.innerHTML = `<h2>${question}</h2>`;
 
     let answers = topic[currentIndex].answers;
-    console.log(answers);   
-   
+
     for (let answer of answers) {
         let button = document.createElement("button");
         button.classList.add("answer-btn");
         button.innerText = answer;
-        console.log(button);
         answersElement.appendChild(button);
-    }                        
-
-
+    }
 }

@@ -76,7 +76,7 @@ body {
 }
 
 .btn-topicImg img {
-  width: 180px;
+  width: 185px;
   height: 170px;
   object-fit: cover;
 }
@@ -136,6 +136,7 @@ body {
   #answers {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .answer-btn {
