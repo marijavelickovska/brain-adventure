@@ -22,17 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-
 function changeContent(quizTopic) {
-    document.getElementById("topic-container").style.display = "none";
-    document.getElementById("quiz-container").style.display = "flex";
+    document.getElementById("topic-container").classList.add('hide');
+    document.getElementById("quiz-container").classList.remove('hide');
 
     document.body.style.backgroundImage = `url("assets/images/${quizTopic}.webp")`;
-
-
 }
+
 
 function startQuiz(quizTopic) {
     let questionElement = document.getElementById("question");
@@ -40,6 +36,7 @@ function startQuiz(quizTopic) {
     let quizProgressElement = document.getElementById("quiz-progress");
 
     let currentIndex = 0;
+    let randomQuestionIndex = '';
 
 
     //getAttribute("data-type") returns a string like "quizTopic" 
@@ -60,9 +57,17 @@ function startQuiz(quizTopic) {
     let answers = topic[currentIndex].answers;
 
     for (let answer of answers) {
+        let col = document.createElement("div");
+        col.classList.add("col-12", "col-sm-6", "col-md-5")
+
         let button = document.createElement("button");
         button.classList.add("answer-btn");
         button.innerText = answer;
-        answersElement.appendChild(button);
+
+        col.appendChild(button);
+        answersElement.appendChild(col);
     }
+
+    quizProgressElement.innerHTML = `<h5>Question 13 of 15</h5>`;
+
 }
