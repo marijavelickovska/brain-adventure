@@ -1,3 +1,5 @@
+/* jshint esversion: 11  -  JSHint directive to enable ES11 syntax support*/
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
