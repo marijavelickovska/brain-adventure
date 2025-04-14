@@ -98,6 +98,22 @@ body {
 }
 
 /* Quiz container */
+#quiz-container {
+  flex-direction: column;
+}
+
+#question, 
+#quiz-progress {
+  flex-grow: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#answers {
+ flex-grow: 6; 
+}
+
 .answer-btn {
   width: 100%;
   margin: 10px auto;
