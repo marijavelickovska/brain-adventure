@@ -37,9 +37,7 @@ function startQuiz(quizTopic) {
     let answersElement = document.getElementById("answers");
     let quizProgressElement = document.getElementById("showProgress");
 
-    let currentIndex = 0;
     
-
     //getAttribute("data-type") returns a string like "quizTopic" 
     //Code to convert a string value to variable 
     let topic;
@@ -52,11 +50,16 @@ function startQuiz(quizTopic) {
         topic = mathQuiz;
     }
 
-    let question = topic[currentIndex].question;
+
+    let i = 0;
+    let randomIndexes = randomIndexes(); //[27, 6, 10, 8, 24, 2, 12, 3, 26, 18, 9, 19, 21, 1, 23]
+    
+
+    let question = topic[randomIndexes[i]].question;
     questionElement.innerHTML = `<h2>${question}</h2>`;
   
 
-    let answers = topic[currentIndex].answers;
+    let answers = topic[randomIndexes[i]].answers;
     for (let answer of answers) {
         let col = document.createElement("div");
         col.classList.add("col-12", "col-sm-6", "col-md-5")
