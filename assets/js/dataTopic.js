@@ -1,461 +1,459 @@
 // Separate objects for each topic, each containing 15 questions
 
-const geographyQuiz = [
-    {
-      question: "What is the capital of France?",
-      options: ["Paris", "London", "Rome", "Berlin"],
-      correctAnswer: "Paris"
-    },
-    {
-      question: "Which continent is the Sahara Desert located in?",
-      options: ["Asia", "Africa", "Australia", "South America"],
-      correctAnswer: "Africa"
-    },
-    {
-      question: "Which is the longest river in the world?",
-      options: ["Amazon", "Nile", "Yangtze", "Mississippi"],
-      correctAnswer: "Nile"
-    },
-    {
-      question: "What is the capital city of Australia?",
-      options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
-      correctAnswer: "Canberra"
-    },
-    {
-      question: "Which country has the largest population?",
-      options: ["India", "USA", "China", "Brazil"],
-      correctAnswer: "China"
-    },
-    {
-      question: "Which ocean lies on the east coast of the United States?",
-      options: ["Atlantic", "Pacific", "Indian", "Arctic"],
-      correctAnswer: "Atlantic"
-    },
-    {
-      question: "Mount Everest is located in which mountain range?",
-      options: ["Andes", "Rockies", "Alps", "Himalayas"],
-      correctAnswer: "Himalayas"
-    },
-    {
-      question: "Which country is known as the Land of the Rising Sun?",
-      options: ["China", "Japan", "Thailand", "Vietnam"],
-      correctAnswer: "Japan"
-    },
-    {
-      question: "What is the largest country in the world by area?",
-      options: ["USA", "Russia", "Canada", "China"],
-      correctAnswer: "Russia"
-    },
-    {
-      question: "Which continent is the smallest by land area?",
-      options: ["Europe", "Australia", "Antarctica", "South America"],
-      correctAnswer: "Australia"
-    },
-    {
-      question: "The Great Wall is located in which country?",
-      options: ["China", "India", "Japan", "Korea"],
-      correctAnswer: "China"
-    },
-    {
-      question: "Which U.S. state is known as the Sunshine State?",
-      options: ["California", "Florida", "Texas", "Hawaii"],
-      correctAnswer: "Florida"
-    },
-    {
-      question: "How many continents are there?",
-      options: ["5", "6", "7", "8"],
-      correctAnswer: "7"
-    },
-    {
-      question: "Which country has the most islands?",
-      options: ["Indonesia", "Philippines", "Sweden", "Canada"],
-      correctAnswer: "Sweden"
-    },
-    {
-      question: "Which desert is the largest in the world?",
-      options: ["Gobi", "Sahara", "Antarctic", "Kalahari"],
-      correctAnswer: "Antarctic"
-    },
-    {
-      question: "What is the capital of Canada?",
-      options: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
-      correctAnswer: "Ottawa"
-    },
-    {
-      question: "Which river flows through London?",
-      options: ["Thames", "Seine", "Danube", "Rhine"],
-      correctAnswer: "Thames"
-    },
-    {
-      question: "What is the capital of Egypt?",
-      options: ["Cairo", "Alexandria", "Luxor", "Giza"],
-      correctAnswer: "Cairo"
-    },
-    {
-      question: "In which country is the city of Istanbul located?",
-      options: ["Greece", "Turkey", "Bulgaria", "Italy"],
-      correctAnswer: "Turkey"
-    },
-    {
-      question: "Which country is shaped like a boot?",
-      options: ["France", "Spain", "Italy", "Portugal"],
-      correctAnswer: "Italy"
-    },
-    {
-      question: "Which continent has the most countries?",
-      options: ["Asia", "Europe", "Africa", "South America"],
-      correctAnswer: "Africa"
-    },
-    {
-      question: "What is the capital of Germany?",
-      options: ["Munich", "Frankfurt", "Berlin", "Hamburg"],
-      correctAnswer: "Berlin"
-    },
-    {
-      question: "Which two continents does Russia span?",
-      options: ["Europe and Asia", "Asia and Africa", "Europe and Africa", "Asia and Australia"],
-      correctAnswer: "Europe and Asia"
-    },
-    {
-      question: "What is the name of the sea between Europe and Africa?",
-      options: ["Red Sea", "Black Sea", "Mediterranean Sea", "Baltic Sea"],
-      correctAnswer: "Mediterranean Sea"
-    },
-    {
-      question: "Which mountain is the tallest in North America?",
-      options: ["Mount Logan", "Mount McKinley (Denali)", "Mount Saint Elias", "Pico de Orizaba"],
-      correctAnswer: "Mount McKinley (Denali)"
-    },
-    {
-      question: "What is the name of the largest rainforest?",
-      options: ["Amazon", "Congo", "Daintree", "Sundarbans"],
-      correctAnswer: "Amazon"
-    },
-    {
-      question: "What is the capital of Spain?",
-      options: ["Madrid", "Barcelona", "Valencia", "Seville"],
-      correctAnswer: "Madrid"
-    },
-    {
-      question: "Which country is home to the Andes Mountains?",
-      options: ["Chile", "Argentina", "Peru", "All of the above"],
-      correctAnswer: "All of the above"
-    },
-    {
-      question: "Which river flows through Paris?",
-      options: ["Seine", "Rhine", "Danube", "Loire"],
-      correctAnswer: "Seine"
-    },
-    {
-      question: "Which is the southernmost continent?",
-      options: ["Africa", "South America", "Australia", "Antarctica"],
-      correctAnswer: "Antarctica"
-    }
-  ];
+const geographyQuiz = [{
+    question: "What is the capital city of France?",
+    answers: ["Paris", "Madrid", "Berlin", "Rome"],
+    correctAnswer: "Paris"
+  },
+  {
+    question: "Which continent is the Sahara Desert located in?",
+    answers: ["Africa", "Asia", "Australia", "South America"],
+    correctAnswer: "Africa"
+  },
+  {
+    question: "What is the longest river in the world?",
+    answers: ["Nile", "Amazon", "Yangtze", "Mississippi"],
+    correctAnswer: "Nile"
+  },
+  {
+    question: "Which ocean lies between Africa and Australia?",
+    answers: ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Arctic Ocean"],
+    correctAnswer: "Indian Ocean"
+  },
+  {
+    question: "Mount Everest is part of which mountain range?",
+    answers: ["Himalayas", "Alps", "Andes", "Rockies"],
+    correctAnswer: "Himalayas"
+  },
+  {
+    question: "Which country has the most people?",
+    answers: ["China", "India", "USA", "Russia"],
+    correctAnswer: "China"
+  },
+  {
+    question: "What is the smallest country in the world?",
+    answers: ["Vatican City", "Monaco", "Malta", "San Marino"],
+    correctAnswer: "Vatican City"
+  },
+  {
+    question: "Which country is known as the Land of the Rising Sun?",
+    answers: ["Japan", "China", "Thailand", "South Korea"],
+    correctAnswer: "Japan"
+  },
+  {
+    question: "Which US state is the Grand Canyon located in?",
+    answers: ["Arizona", "Nevada", "Utah", "California"],
+    correctAnswer: "Arizona"
+  },
+  {
+    question: "What is the capital of Canada?",
+    answers: ["Ottawa", "Toronto", "Vancouver", "Montreal"],
+    correctAnswer: "Ottawa"
+  },
+  {
+    question: "Which country is shaped like a boot?",
+    answers: ["Italy", "Spain", "Portugal", "Greece"],
+    correctAnswer: "Italy"
+  },
+  {
+    question: "What is the largest continent?",
+    answers: ["Asia", "Africa", "Europe", "North America"],
+    correctAnswer: "Asia"
+  },
+  {
+    question: "Which river runs through Egypt?",
+    answers: ["Nile", "Euphrates", "Amazon", "Tigris"],
+    correctAnswer: "Nile"
+  },
+  {
+    question: "Which country has the city of Istanbul?",
+    answers: ["Turkey", "Greece", "Egypt", "Syria"],
+    correctAnswer: "Turkey"
+  },
+  {
+    question: "Which continent is Brazil in?",
+    answers: ["South America", "North America", "Europe", "Africa"],
+    correctAnswer: "South America"
+  },
+  {
+    question: "Which ocean is the largest?",
+    answers: ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+    correctAnswer: "Pacific Ocean"
+  },
+  {
+    question: "Which city is known as the Big Apple?",
+    answers: ["New York", "Los Angeles", "Chicago", "San Francisco"],
+    correctAnswer: "New York"
+  },
+  {
+    question: "Where is the Great Barrier Reef located?",
+    answers: ["Australia", "Hawaii", "Indonesia", "Philippines"],
+    correctAnswer: "Australia"
+  },
+  {
+    question: "Which desert is the largest in the world?",
+    answers: ["Antarctic", "Sahara", "Gobi", "Kalahari"],
+    correctAnswer: "Antarctic"
+  },
+  {
+    question: "Which country has pyramids?",
+    answers: ["Egypt", "Mexico", "China", "India"],
+    correctAnswer: "Egypt"
+  },
+  {
+    question: "Which is the highest mountain in Africa?",
+    answers: ["Mount Kilimanjaro", "Mount Kenya", "Atlas Mountains", "Rwenzori"],
+    correctAnswer: "Mount Kilimanjaro"
+  },
+  {
+    question: "Which country has a maple leaf on its flag?",
+    answers: ["Canada", "USA", "Australia", "New Zealand"],
+    correctAnswer: "Canada"
+  },
+  {
+    question: "Which city is the capital of Japan?",
+    answers: ["Tokyo", "Kyoto", "Osaka", "Nagoya"],
+    correctAnswer: "Tokyo"
+  },
+  {
+    question: "What is the name of the sea between Europe and Africa?",
+    answers: ["Mediterranean Sea", "Black Sea", "Red Sea", "Baltic Sea"],
+    correctAnswer: "Mediterranean Sea"
+  },
+  {
+    question: "What is the capital of Germany?",
+    answers: ["Berlin", "Munich", "Hamburg", "Frankfurt"],
+    correctAnswer: "Berlin"
+  },
+  {
+    question: "Where is the Eiffel Tower?",
+    answers: ["Paris", "London", "Rome", "Madrid"],
+    correctAnswer: "Paris"
+  },
+  {
+    question: "Which island country is southeast of India?",
+    answers: ["Sri Lanka", "Maldives", "Indonesia", "Philippines"],
+    correctAnswer: "Sri Lanka"
+  },
+  {
+    question: "Which African country starts with 'N' and is the most populous?",
+    answers: ["Nigeria", "Niger", "Namibia", "Nepal"],
+    correctAnswer: "Nigeria"
+  },
+  {
+    question: "What is the capital of Spain?",
+    answers: ["Madrid", "Barcelona", "Seville", "Valencia"],
+    correctAnswer: "Madrid"
+  },
+  {
+    question: "Which river flows through London?",
+    answers: ["Thames", "Seine", "Danube", "Rhine"],
+    correctAnswer: "Thames"
+  }
+];
 
 const historyQuiz = [
-    {
-      question: "Who was the first President of the United States?",
-      options: ["George Washington", "Abraham Lincoln", "John Adams", "Thomas Jefferson"],
-      correctAnswer: "George Washington"
-    },
-    {
-      question: "In which year did World War II end?",
-      options: ["1945", "1939", "1918", "1950"],
-      correctAnswer: "1945"
-    },
-    {
-      question: "Who was the famous civil rights leader who gave the 'I Have a Dream' speech?",
-      options: ["Martin Luther King Jr.", "Malcolm X", "Rosa Parks", "Frederick Douglass"],
-      correctAnswer: "Martin Luther King Jr."
-    },
-    {
-      question: "What ancient civilization built the pyramids?",
-      options: ["Romans", "Greeks", "Egyptians", "Babylonians"],
-      correctAnswer: "Egyptians"
-    },
-    {
-      question: "Who was the leader of Nazi Germany during World War II?",
-      options: ["Joseph Stalin", "Winston Churchill", "Adolf Hitler", "Benito Mussolini"],
-      correctAnswer: "Adolf Hitler"
-    },
-    {
-      question: "Which ship sank in 1912 after hitting an iceberg?",
-      options: ["Titanic", "Lusitania", "Queen Mary", "Britannic"],
-      correctAnswer: "Titanic"
-    },
-    {
-      question: "Who discovered America in 1492?",
-      options: ["Christopher Columbus", "Amerigo Vespucci", "Marco Polo", "Leif Erikson"],
-      correctAnswer: "Christopher Columbus"
-    },
-    {
-      question: "What wall fell in 1989 symbolizing the end of the Cold War?",
-      options: ["The Berlin Wall", "The Great Wall of China", "The Iron Curtain", "Hadrian's Wall"],
-      correctAnswer: "The Berlin Wall"
-    },
-    {
-      question: "Which empire was ruled by Julius Caesar?",
-      options: ["Greek Empire", "Roman Empire", "Persian Empire", "Byzantine Empire"],
-      correctAnswer: "Roman Empire"
-    },
-    {
-      question: "Who was Queen of England during the Spanish Armada?",
-      options: ["Elizabeth I", "Mary I", "Victoria", "Anne"],
-      correctAnswer: "Elizabeth I"
-    },
-    {
-      question: "What was the name of the war between the North and South in the United States?",
-      options: ["American Civil War", "Revolutionary War", "War of 1812", "Cold War"],
-      correctAnswer: "American Civil War"
-    },
-    {
-      question: "Who painted the Mona Lisa?",
-      options: ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
-      correctAnswer: "Leonardo da Vinci"
-    },
-    {
-      question: "In which country did the Industrial Revolution begin?",
-      options: ["Germany", "United States", "France", "United Kingdom"],
-      correctAnswer: "United Kingdom"
-    },
-    {
-      question: "Which US President abolished slavery?",
-      options: ["Abraham Lincoln", "George Washington", "Thomas Jefferson", "Theodore Roosevelt"],
-      correctAnswer: "Abraham Lincoln"
-    },
-    {
-      question: "What year did man first land on the moon?",
-      options: ["1969", "1972", "1959", "1980"],
-      correctAnswer: "1969"
-    },
-    {
-      question: "Who was the famous nurse during the Crimean War?",
-      options: ["Florence Nightingale", "Marie Curie", "Clara Barton", "Mary Seacole"],
-      correctAnswer: "Florence Nightingale"
-    },
-    {
-      question: "Which empire was known for its road network and gladiators?",
-      options: ["Greek Empire", "Roman Empire", "Mongol Empire", "Ottoman Empire"],
-      correctAnswer: "Roman Empire"
-    },
-    {
-      question: "What was the name of the first man-made satellite launched into space?",
-      options: ["Sputnik", "Apollo", "Explorer", "Voyager"],
-      correctAnswer: "Sputnik"
-    },
-    {
-      question: "Who was the British Prime Minister during most of World War II?",
-      options: ["Neville Chamberlain", "Winston Churchill", "Clement Attlee", "Margaret Thatcher"],
-      correctAnswer: "Winston Churchill"
-    },
-    {
-      question: "In what year did the Berlin Wall go up?",
-      options: ["1961", "1955", "1970", "1980"],
-      correctAnswer: "1961"
-    },
-    {
-      question: "What was the name of the policy to prevent the spread of communism after WWII?",
-      options: ["Containment", "Domino Theory", "Isolationism", "Marshall Plan"],
-      correctAnswer: "Containment"
-    },
-    {
-      question: "Which pharaoh's tomb was discovered in 1922?",
-      options: ["Tutankhamun", "Ramses II", "Cleopatra", "Akhenaten"],
-      correctAnswer: "Tutankhamun"
-    },
-    {
-      question: "Who was the first man in space?",
-      options: ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "John Glenn"],
-      correctAnswer: "Yuri Gagarin"
-    },
-    {
-      question: "What was the Renaissance?",
-      options: ["A cultural rebirth", "A war", "A religion", "A disease"],
-      correctAnswer: "A cultural rebirth"
-    },
-    {
-      question: "Which country did Napoleon Bonaparte rule?",
-      options: ["France", "Germany", "Italy", "Spain"],
-      correctAnswer: "France"
-    },
-    {
-      question: "Where did the Black Death originate?",
-      options: ["Asia", "Europe", "Africa", "America"],
-      correctAnswer: "Asia"
-    },
-    {
-      question: "Who was the founder of Islam?",
-      options: ["Muhammad", "Jesus", "Buddha", "Abraham"],
-      correctAnswer: "Muhammad"
-    },
-    {
-      question: "Which ancient city was destroyed by a volcanic eruption in 79 AD?",
-      options: ["Pompeii", "Athens", "Carthage", "Troy"],
-      correctAnswer: "Pompeii"
-    },
-    {
-      question: "What was the Cold War mainly about?",
-      options: ["Ideological conflict between USA and USSR", "Oil", "Territory", "Religion"],
-      correctAnswer: "Ideological conflict between USA and USSR"
-    },
-    {
-      question: "Who was assassinated in Sarajevo in 1914, starting World War I?",
-      options: ["Archduke Franz Ferdinand", "Kaiser Wilhelm", "Winston Churchill", "Tsar Nicholas II"],
-      correctAnswer: "Archduke Franz Ferdinand"
-    }
-  ];
-  
+  {
+    question: "Who was the first President of the United States?",
+    answers: ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
+    correctAnswer: "George Washington"
+  },
+  {
+    question: "In which year did World War II end?",
+    answers: ["1945", "1939", "1941", "1950"],
+    correctAnswer: "1945"
+  },
+  {
+    question: "Which ancient civilization built the pyramids?",
+    answers: ["Egyptians", "Romans", "Greeks", "Aztecs"],
+    correctAnswer: "Egyptians"
+  },
+  {
+    question: "Who discovered America in 1492?",
+    answers: ["Christopher Columbus", "Leif Erikson", "Amerigo Vespucci", "Ferdinand Magellan"],
+    correctAnswer: "Christopher Columbus"
+  },
+  {
+    question: "Which war was fought between the North and South in the United States?",
+    answers: ["Civil War", "Revolutionary War", "World War I", "Vietnam War"],
+    correctAnswer: "Civil War"
+  },
+  {
+    question: "Who was the leader of Nazi Germany?",
+    answers: ["Adolf Hitler", "Joseph Stalin", "Winston Churchill", "Benito Mussolini"],
+    correctAnswer: "Adolf Hitler"
+  },
+  {
+    question: "In which country did the Renaissance begin?",
+    answers: ["Italy", "France", "England", "Germany"],
+    correctAnswer: "Italy"
+  },
+  {
+    question: "What wall fell in 1989?",
+    answers: ["Berlin Wall", "Great Wall of China", "Hadrian's Wall", "Wailing Wall"],
+    correctAnswer: "Berlin Wall"
+  },
+  {
+    question: "Who was the first man to walk on the moon?",
+    answers: ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "John Glenn"],
+    correctAnswer: "Neil Armstrong"
+  },
+  {
+    question: "What ship sank in 1912 after hitting an iceberg?",
+    answers: ["Titanic", "Lusitania", "Queen Mary", "Britannic"],
+    correctAnswer: "Titanic"
+  },
+  {
+    question: "Who was the famous queen of ancient Egypt?",
+    answers: ["Cleopatra", "Nefertiti", "Isis", "Hatshepsut"],
+    correctAnswer: "Cleopatra"
+  },
+  {
+    question: "What empire was ruled by Julius Caesar?",
+    answers: ["Roman Empire", "Greek Empire", "Ottoman Empire", "Byzantine Empire"],
+    correctAnswer: "Roman Empire"
+  },
+  {
+    question: "Which country started the Industrial Revolution?",
+    answers: ["Britain", "Germany", "France", "USA"],
+    correctAnswer: "Britain"
+  },
+  {
+    question: "Who was Martin Luther King Jr.?",
+    answers: ["Civil rights leader", "President", "Scientist", "Inventor"],
+    correctAnswer: "Civil rights leader"
+  },
+  {
+    question: "What was the name of the first successful airplane?",
+    answers: ["Wright Flyer", "Spirit of St. Louis", "Concorde", "Boeing 707"],
+    correctAnswer: "Wright Flyer"
+  },
+  {
+    question: "Who painted the Mona Lisa?",
+    answers: ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
+    correctAnswer: "Leonardo da Vinci"
+  },
+  {
+    question: "Which U.S. President abolished slavery?",
+    answers: ["Abraham Lincoln", "George Washington", "Theodore Roosevelt", "Andrew Jackson"],
+    correctAnswer: "Abraham Lincoln"
+  },
+  {
+    question: "What was the Cold War?",
+    answers: ["Political tension between USA and USSR", "A real war", "A war in Antarctica", "WWII battle"],
+    correctAnswer: "Political tension between USA and USSR"
+  },
+  {
+    question: "Who wrote the Declaration of Independence?",
+    answers: ["Thomas Jefferson", "George Washington", "John Adams", "Benjamin Franklin"],
+    correctAnswer: "Thomas Jefferson"
+  },
+  {
+    question: "What was the Great Depression?",
+    answers: ["An economic crisis", "A war", "A disease", "A revolution"],
+    correctAnswer: "An economic crisis"
+  },
+  {
+    question: "Who was the famous leader of the Indian independence movement?",
+    answers: ["Mahatma Gandhi", "Jawaharlal Nehru", "Indira Gandhi", "B. R. Ambedkar"],
+    correctAnswer: "Mahatma Gandhi"
+  },
+  {
+    question: "Where was Napoleon Bonaparte from?",
+    answers: ["France", "Italy", "Germany", "Spain"],
+    correctAnswer: "France"
+  },
+  {
+    question: "What ancient city was destroyed by a volcano in 79 AD?",
+    answers: ["Pompeii", "Rome", "Athens", "Carthage"],
+    correctAnswer: "Pompeii"
+  },
+  {
+    question: "Who was the first female Prime Minister of the UK?",
+    answers: ["Margaret Thatcher", "Elizabeth II", "Theresa May", "Queen Victoria"],
+    correctAnswer: "Margaret Thatcher"
+  },
+  {
+    question: "Which country built the Great Wall?",
+    answers: ["China", "Japan", "India", "Mongolia"],
+    correctAnswer: "China"
+  },
+  {
+    question: "What ancient civilization lived in Machu Picchu?",
+    answers: ["Incas", "Mayas", "Aztecs", "Olmecs"],
+    correctAnswer: "Incas"
+  },
+  {
+    question: "Which U.S. President was in office during WWII?",
+    answers: ["Franklin D. Roosevelt", "Harry Truman", "Dwight Eisenhower", "Woodrow Wilson"],
+    correctAnswer: "Franklin D. Roosevelt"
+  },
+  {
+    question: "What was the name of Hitler’s book?",
+    answers: ["Mein Kampf", "Das Kapital", "The Third Reich", "Nazi Manifesto"],
+    correctAnswer: "Mein Kampf"
+  },
+  {
+    question: "What year did the Berlin Wall fall?",
+    answers: ["1989", "1990", "1987", "1991"],
+    correctAnswer: "1989"
+  },
+  {
+    question: "Where was the Declaration of Independence signed?",
+    answers: ["Philadelphia", "Washington D.C.", "New York", "Boston"],
+    correctAnswer: "Philadelphia"
+  }
+];
+
 const mathQuiz = [
-    {
-      question: "What is 7 + 8?",
-      options: ["14", "15", "16", "13"],
-      correctAnswer: "15"
-    },
-    {
-      question: "What is 12 x 5?",
-      options: ["60", "50", "70", "55"],
-      correctAnswer: "60"
-    },
-    {
-      question: "What is the square root of 81?",
-      options: ["9", "8", "7", "6"],
-      correctAnswer: "9"
-    },
-    {
-      question: "What is 100 divided by 4?",
-      options: ["25", "20", "30", "24"],
-      correctAnswer: "25"
-    },
-    {
-      question: "What is the value of Pi (π) approximately?",
-      options: ["3.14", "2.17", "1.41", "4.00"],
-      correctAnswer: "3.14"
-    },
-    {
-      question: "What is 15% of 200?",
-      options: ["30", "25", "35", "40"],
-      correctAnswer: "30"
-    },
-    {
-      question: "What is 9 x 9?",
-      options: ["81", "72", "99", "91"],
-      correctAnswer: "81"
-    },
-    {
-      question: "What is the perimeter of a square with side 6?",
-      options: ["24", "18", "12", "36"],
-      correctAnswer: "24"
-    },
-    {
-      question: "What is the area of a rectangle with length 8 and width 3?",
-      options: ["24", "11", "21", "18"],
-      correctAnswer: "24"
-    },
-    {
-      question: "What is 0.5 as a fraction?",
-      options: ["1/2", "1/3", "1/4", "2/3"],
-      correctAnswer: "1/2"
-    },
-    {
-      question: "What is 3² (3 squared)?",
-      options: ["9", "6", "3", "12"],
-      correctAnswer: "9"
-    },
-    {
-      question: "How many degrees are in a right angle?",
-      options: ["90", "45", "180", "60"],
-      correctAnswer: "90"
-    },
-    {
-      question: "What comes next in the sequence: 2, 4, 6, 8, ___?",
-      options: ["10", "12", "14", "9"],
-      correctAnswer: "10"
-    },
-    {
-      question: "What is the value of 3x if x = 4?",
-      options: ["12", "7", "9", "10"],
-      correctAnswer: "12"
-    },
-    {
-      question: "What is the sum of angles in a triangle?",
-      options: ["180", "90", "360", "270"],
-      correctAnswer: "180"
-    },
-    {
-      question: "What is 144 ÷ 12?",
-      options: ["12", "10", "14", "11"],
-      correctAnswer: "12"
-    },
-    {
-      question: "What is 5³ (5 cubed)?",
-      options: ["125", "15", "25", "100"],
-      correctAnswer: "125"
-    },
-    {
-      question: "What is the decimal of 1/4?",
-      options: ["0.25", "0.4", "0.5", "0.75"],
-      correctAnswer: "0.25"
-    },
-    {
-      question: "What is the next prime number after 7?",
-      options: ["11", "9", "10", "13"],
-      correctAnswer: "11"
-    },
-    {
-      question: "What is 18 x 9?",
-      options: ["9", "8", "10", "7"],
-      correctAnswer: "9"
-    },
-    {
-      question: "Which number is an even number?",
-      options: ["8", "9", "11", "13"],
-      correctAnswer: "8"
-    },
-    {
-      question: "How many sides does a hexagon have?",
-      options: ["6", "5", "8", "7"],
-      correctAnswer: "6"
-    },
-    {
-      question: "What is 20% of 50?",
-      options: ["10", "5", "15", "20"],
-      correctAnswer: "10"
-    },
-    {
-      question: "What is 11 + 22?",
-      options: ["33", "32", "31", "30"],
-      correctAnswer: "33"
-    },
-    {
-      question: "If a = 5 and b = 3, what is a + b?",
-      options: ["8", "9", "7", "6"],
-      correctAnswer: "8"
-    },
-    {
-      question: "What is the smallest prime number?",
-      options: ["2", "1", "3", "5"],
-      correctAnswer: "2"
-    },
-    {
-      question: "What is 1/2 + 1/2?",
-      options: ["1", "0.5", "1.5", "2"],
-      correctAnswer: "1"
-    },
-    {
-      question: "What is 10 squared (10²)?",
-      options: ["100", "20", "10", "110"],
-      correctAnswer: "100"
-    },
-    {
-      question: "What is 60 ÷ 6?",
-      options: ["10", "6", "12", "8"],
-      correctAnswer: "10"
-    },
-    {
-      question: "What is 4 x 7?",
-      options: ["28", "24", "32", "36"],
-      correctAnswer: "28"
-    }
-  ];
-  
+  {
+    question: "What is 7 + 5?",
+    answers: ["12", "10", "14", "13"],
+    correctAnswer: "12"
+  },
+  {
+    question: "What is the square root of 64?",
+    answers: ["8", "6", "7", "9"],
+    correctAnswer: "8"
+  },
+  {
+    question: "What is 9 x 6?",
+    answers: ["54", "63", "48", "56"],
+    correctAnswer: "54"
+  },
+  {
+    question: "What is 100 divided by 4?",
+    answers: ["25", "20", "30", "40"],
+    correctAnswer: "25"
+  },
+  {
+    question: "What is the value of Pi (approx)?",
+    answers: ["3.14", "2.71", "1.61", "4.20"],
+    correctAnswer: "3.14"
+  },
+  {
+    question: "What is 15% of 200?",
+    answers: ["30", "25", "35", "40"],
+    correctAnswer: "30"
+  },
+  {
+    question: "How many degrees are in a right angle?",
+    answers: ["90", "180", "45", "60"],
+    correctAnswer: "90"
+  },
+  {
+    question: "What is 2 to the power of 5?",
+    answers: ["32", "16", "64", "25"],
+    correctAnswer: "32"
+  },
+  {
+    question: "What is the perimeter of a square with side 5?",
+    answers: ["20", "10", "25", "15"],
+    correctAnswer: "20"
+  },
+  {
+    question: "What is 0.5 x 8?",
+    answers: ["4", "2", "6", "5"],
+    correctAnswer: "4"
+  },
+  {
+    question: "What is the next prime number after 7?",
+    answers: ["11", "9", "10", "8"],
+    correctAnswer: "11"
+  },
+  {
+    question: "How many sides does a hexagon have?",
+    answers: ["6", "8", "5", "7"],
+    correctAnswer: "6"
+  },
+  {
+    question: "What is 11 x 11?",
+    answers: ["121", "111", "132", "101"],
+    correctAnswer: "121"
+  },
+  {
+    question: "What is 81 divided by 9?",
+    answers: ["9", "8", "7", "6"],
+    correctAnswer: "9"
+  },
+  {
+    question: "What is 3³?",
+    answers: ["27", "9", "18", "36"],
+    correctAnswer: "27"
+  },
+  {
+    question: "How many minutes are in 2 hours?",
+    answers: ["120", "60", "90", "150"],
+    correctAnswer: "120"
+  },
+  {
+    question: "What is 45 + 55?",
+    answers: ["100", "90", "110", "105"],
+    correctAnswer: "100"
+  },
+  {
+    question: "What is the area of a rectangle 5x3?",
+    answers: ["15", "8", "10", "18"],
+    correctAnswer: "15"
+  },
+  {
+    question: "Which number is even?",
+    answers: ["16", "15", "13", "11"],
+    correctAnswer: "16"
+  },
+  {
+    question: "What is 1/2 + 1/2?",
+    answers: ["1", "0.5", "2", "1.5"],
+    correctAnswer: "1"
+  },
+  {
+    question: "What is 3.5 + 4.5?",
+    answers: ["8", "7.5", "9", "7"],
+    correctAnswer: "8"
+  },
+  {
+    question: "What is the result of 10 - 4?",
+    answers: ["6", "4", "5", "7"],
+    correctAnswer: "6"
+  },
+  {
+    question: "Which number is a multiple of 4?",
+    answers: ["16", "13", "15", "11"],
+    correctAnswer: "16"
+  },
+  {
+    question: "How many zeros are in one thousand?",
+    answers: ["3", "2", "4", "5"],
+    correctAnswer: "3"
+  },
+  {
+    question: "What is the product of 0 x 99?",
+    answers: ["0", "99", "1", "100"],
+    correctAnswer: "0"
+  },
+  {
+    question: "What is the largest two-digit number?",
+    answers: ["99", "100", "98", "89"],
+    correctAnswer: "99"
+  },
+  {
+    question: "What is 18 - 9?",
+    answers: ["9", "8", "10", "7"],
+    correctAnswer: "9"
+  },
+  {
+    question: "What is the sum of angles in a triangle?",
+    answers: ["180°", "90°", "360°", "270°"],
+    correctAnswer: "180°"
+  },
+  {
+    question: "What comes after 999?",
+    answers: ["1000", "1001", "998", "9999"],
+    correctAnswer: "1000"
+  },
+  {
+    question: "What is 5 x 0?",
+    answers: ["0", "5", "1", "10"],
+    correctAnswer: "0"
+  }
+];
