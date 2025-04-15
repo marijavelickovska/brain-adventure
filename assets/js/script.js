@@ -38,8 +38,7 @@ function startQuiz(quizTopic) {
     let quizProgressElement = document.getElementById("showProgress");
 
     let currentIndex = 0;
-    let randomQuestionIndex = '';
-
+    
 
     //getAttribute("data-type") returns a string like "quizTopic" 
     //Code to convert a string value to variable 
@@ -74,3 +73,21 @@ function startQuiz(quizTopic) {
     quizProgressElement.innerHTML = `<h5>Question 13 of 15</h5>`;
 
 }
+
+function randomIndexes(){
+        let randomQuestionIndexes = [];
+
+        while (randomQuestionIndexes.length < 15) {
+            let randomIndex = Math.ceil(Math.random() * 29);
+
+            if (randomQuestionIndexes.includes(randomIndex)) {
+                continue;
+            } else {
+                randomQuestionIndexes.push(randomIndex);
+            }
+        }
+
+        return randomQuestionIndexes;
+
+}
+
