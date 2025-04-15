@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("confirmBtn").addEventListener("click", function () {
         modal.hide();
-        changeContent(quizTopic);
+        //changeContent(quizTopic);
         startQuiz(quizTopic);
     });
 });
@@ -66,6 +66,7 @@ function showNextQuestion(quizTopic) {
     let question = topic[randomIndexes[index]].question;
     questionElement.innerHTML = `<h2>${question}</h2>`;
 
+    answersElement.innerHTML = "";
 
     let answers = topic[randomIndexes[index]].answers;
     for (let answer of answers) {
@@ -81,6 +82,9 @@ function showNextQuestion(quizTopic) {
     }
 
     quizProgressElement.innerHTML = `<h5>Question 13 of 15</h5>`;
+
+    increasmentIndex();
+
 }
 
 
@@ -99,22 +103,17 @@ function generateRandomIndexes() {
 }
 
 
-document.querySelectorAll('.answer-btn').forEach(button => {
-    button.addEventListener('click', handleAnswerClick);
-});
-
 function increasmentIndex() {
     let buttons = document.getElementsByClassName("answer-btn");
 
     for (const button of buttons) {
         button.addEventListener("click", function () {
-            index++;
-            handleAnswerClick();
+            index ++;
+            showNextQuestion(quizTopic)
         });
-
     }
 }
 
 function handleAnswerClick() {
-    showNextQuestion();
+    showNextQuestion(quizTopic);
 }
