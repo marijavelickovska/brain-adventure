@@ -81,7 +81,7 @@ function showNextQuestion(quizTopic) {
         answersElement.appendChild(col);
     }
 
-    quizProgressElement.innerHTML = `<h5>Question 13 of 15</h5>`;
+    quizProgressElement.innerHTML = `<h5>Question ${index + 1} of ${randomIndexes.length}</h5>`;
 
     increasmentIndex();
 
