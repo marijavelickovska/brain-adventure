@@ -129,4 +129,14 @@ body {
   display: none;
 }
 
+.green {
+  background-color: green !important;
+  color: white;
+}
+
+.red {
+  background-color: red !important;
+  color: white;
+}
+
 

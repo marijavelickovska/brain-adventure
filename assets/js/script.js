@@ -6,6 +6,11 @@ let randomIndexes = [];
 let quizTopic = [];
 let correctAnswers = 0;
 
+let questionElement = document.getElementById("showQuestion");
+let answersElement = document.getElementById("answers");
+let progressElement = document.getElementById("showProgress");
+
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("btn-topicImg");
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
@@ -55,11 +60,6 @@ function getSelectedQuizTopicArray(topic) {
 
 
 function showNextQuestion(topic) {
-    let questionElement = document.getElementById("showQuestion");
-    let answersElement = document.getElementById("answers");
-    let progressElement = document.getElementById("showProgress");
-
-
 
     //let quizTopicQuestions = getSelectedQuizTopicArray(topic); //array of 30
     let randomIndexes = generateRandomIndexes(); //[27, 6, 10, 8, 24, 2, 12, 3, 26, 18, 9, 19, 21, 1, 23]
@@ -110,11 +110,14 @@ function handleAnswerClick() {
         button.addEventListener("click", function () {
             let correct = quizTopic[randomIndexes[currentIndex]].correct;
             let userAnswer = this.innerText;
-            //console.log(userAnswer);
-            //console.log(correctAnswer);
+            console.log(userAnswer);
+            console.log(correct);
             if (userAnswer === correct) {
                 correctAnswers++;
-            }
+                //this.classList.add("green");
+            } //else {
+                //this.classList.add("red");
+            //}
             currentIndex++;
             isQuizComplete();
         });
@@ -124,5 +127,13 @@ function handleAnswerClick() {
 
 
 function isQuizComplete() {
-   
+    if (currentIndex < randomIndexes.length) {
+        showNextQuestion(topic);
+    } else {
+        questionElement.innerHTML = `<h1>Quiz completed!</h1>`;
+        answersElement.innerHTML = `<h2>Score: ${correctAnswers}/${currentIndex + 1}</h2>
+                                     <p>Great job!</p>`;
+        progressElement.innerHTML = "";
+    }
+
 }
