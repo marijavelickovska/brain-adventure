@@ -31,33 +31,37 @@ function changeContent(quizTopic) {
     document.body.style.backgroundImage = `url("assets/images/${quizTopic}.webp")`;
 }
 
+function getSelectedQuizTopicArray(quizTopic) {
+    //Code to convert a string value to variable 
+    let topic;
+
+    if (quizTopic === "geography") {
+        return topic = geographyQuiz;
+    } else if (quizTopic === "history") {
+        return topic = historyQuiz;
+    } else if (quizTopic === "math") {
+        return topic = mathQuiz;
+    }
+}
+
 
 function startQuiz(quizTopic) {
     let questionElement = document.getElementById("showQuestion");
     let answersElement = document.getElementById("answers");
     let quizProgressElement = document.getElementById("showProgress");
 
-    
-    //getAttribute("data-type") returns a string like "quizTopic" 
-    //Code to convert a string value to variable 
-    let topic;
-
-    if (quizTopic === "geography") {
-        topic = geographyQuiz;
-    } else if (quizTopic === "history") {
-        topic = historyQuiz;
-    } else if (quizTopic === "math") {
-        topic = mathQuiz;
-    }
 
 
+
+    let topicProba = getSelectedQuizTopicArray(quizTopic);
+    console.log(topicProba);
     let i = 0;
     let randomIndexes = randomIndexes(); //[27, 6, 10, 8, 24, 2, 12, 3, 26, 18, 9, 19, 21, 1, 23]
-    
+
 
     let question = topic[randomIndexes[i]].question;
     questionElement.innerHTML = `<h2>${question}</h2>`;
-  
+
 
     let answers = topic[randomIndexes[i]].answers;
     for (let answer of answers) {
@@ -77,20 +81,19 @@ function startQuiz(quizTopic) {
 
 }
 
-function randomIndexes(){
-        let randomQuestionIndexes = [];
+function randomIndexes() {
+    let randomQuestionIndexes = [];
 
-        while (randomQuestionIndexes.length < 15) {
-            let randomIndex = Math.ceil(Math.random() * 29);
+    while (randomQuestionIndexes.length < 15) {
+        let randomIndex = Math.ceil(Math.random() * 29);
 
-            if (randomQuestionIndexes.includes(randomIndex)) {
-                continue;
-            } else {
-                randomQuestionIndexes.push(randomIndex);
-            }
+        if (randomQuestionIndexes.includes(randomIndex)) {
+            continue;
+        } else {
+            randomQuestionIndexes.push(randomIndex);
         }
+    }
 
-        return randomQuestionIndexes;
+    return randomQuestionIndexes;
 
 }
-
