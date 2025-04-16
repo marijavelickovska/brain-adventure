@@ -38,7 +38,7 @@ function startQuiz(topic) {
 
 function changeContent(topic) {
     document.getElementById("topic-container").classList.add("hide");
-    document.getElementById("quiz-container").classList.remove("hide")
+    document.getElementById("quiz-container").classList.remove("hide");
     document.getElementById("quiz-container").style.display = "flex";
 
     document.body.style.backgroundImage = `url("assets/images/${topic}.webp")`;
@@ -110,17 +110,17 @@ function generateRandomIndexes() {
 function handleAnswerClick() {
     let buttons = document.getElementsByClassName("answer-btn");
 
-
     for (let button of buttons) {
         button.addEventListener("click", function () {
             let correct = quizTopic[randomIndexes[currentIndex]].correct;
             let userAnswer = this.innerText;
+        
             console.log(userAnswer);
             console.log(correct);
             if (userAnswer === correct) {
-                correctAnswers++;
+                 correctAnswers++;
             }
-
+            
             currentIndex++;
             isQuizComplete();
         });
@@ -133,10 +133,33 @@ function isQuizComplete() {
     if (currentIndex < randomIndexes.length) {
         showNextQuestion(topic);
     } else {
-        questionElement.innerHTML = `<h1>Quiz completed!</h1>`;
-        answersElement.innerHTML = `<h2>Score: ${correctAnswers}/${currentIndex + 1}</h2>
-                                     <p>Great job!</p>`;
-        progressElement.innerHTML = "";
+        showScore(correctAnswers);
+    }
+
+}
+
+function showScore(correctAnswers) {
+    console.log(correctAnswers);
+    document.getElementById("quiz-container").classList.add("hide");
+    document.getElementById("result-container").classList.remove("hide");
+    document.getElementById("result-container").style.display = "flex";
+
+    let header = document.querySelector(".header");
+    let score = document.querySelector(".score");
+    let message = document.querySelector(".message");
+    
+    if(correctAnswers <= 5) {
+        header.innerHTML = "Keep trying!";
+        score.innerHTML = `You got only ${correctAnswers} out of 15.`;
+        message.innerHTML = "Don't worry, you can always try again!<span>💪</span>"
+    } else if (correctAnswers <= 10) {
+        header.innerHTML = "Good job!";
+        score.innerHTML = `You scored ${correctAnswers} out of 15.`;
+        message.innerHTML = "Keep practicing!<span>🌟</span>"
+    } else {
+        header.innerHTML = "Congratulations!";
+        score.innerHTML = `You scored ${correctAnswers} out of 15.`;
+        message.innerHTML = "Excellent work!<span>🏆</span>"
     }
 
 }
