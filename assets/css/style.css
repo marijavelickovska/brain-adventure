@@ -43,7 +43,8 @@ body {
 }
 
 #topic-container,
-#quiz-container {
+#quiz-container,
+#result-container {
   min-height: 90vh;
   overflow-y: auto;
   width: 80%;
@@ -141,6 +142,13 @@ body {
   color: white;
 }
 
+/* Result container*/
+#result-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .orange {
   color: var(--orange-color);
 }
@@ -149,8 +157,13 @@ body {
   font-weight: bold;
 }
 
+.btn-brown {
+  background-color: var(--gray-color);
+  color: var(--gold-color);
+}
+
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /* Media queries */
