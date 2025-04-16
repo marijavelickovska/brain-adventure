@@ -58,18 +58,6 @@
     </div>
 
 
-    <!-- Quiz container -->
-    <div id="quiz-container" class="container hide">
-        <div id="question" class="row text-center">
-            <div id="showQuestion" class="col-12 question"></div>
-        </div>
-        <div id="answers" class="row d-flex justify-content-around"></div>
-        <div id="quiz-progress" class="row text-center mt-auto">
-            <div id="showProgress"  class="col-12"></div>
-        </div>
-    </div>
-
-
     <!-- Modal appears on click of the images, for confirmation to start the quiz -->
     <!-- Modal window is taken from Bootstrap -->
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
@@ -89,6 +77,28 @@
         </div>
     </div>
 
+
+    <!-- Quiz container -->
+    <div id="quiz-container" class="container hide">
+        <div id="question" class="row text-center">
+            <div id="showQuestion" class="col-12 question"></div>
+        </div>
+        <div id="answers" class="row d-flex justify-content-around"></div>
+        <div id="quiz-progress" class="row text-center mt-auto">
+            <div id="showProgress"  class="col-12"></div>
+        </div>
+    </div>
+
+    <!-- Result conatainer -->
+     <div id="result-container" class="text-center hide">
+        <h1 class="header"></h1>
+        <h2 class="score"></h2> 
+        <p class="message"></p>
+        <button class="btn btn-brown fs-5">Play Again!</button>
+     </div>
+
+
+    
 
 
 
