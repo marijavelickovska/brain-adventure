@@ -113,11 +113,9 @@ function handleAnswerClick() {
             console.log(userAnswer);
             console.log(correct);
             if (userAnswer === correct) {
-                correctAnswers++;
-                //this.classList.add("green");
-            } //else {
-                //this.classList.add("red");
-            //}
+                correctAnswers++; 
+            } 
+           
             currentIndex++;
             isQuizComplete();
         });
