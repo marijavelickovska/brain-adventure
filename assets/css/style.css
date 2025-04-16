@@ -149,6 +149,29 @@ body {
   align-items: center;
 }
 
+.message {
+  color: var(--orange-color);
+  font-family: var(--tertiary-font);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.message span {
+font-size: 2rem;
+}
+
+.btn-brown {
+  background-color: var(--brown-color);
+  color: var(--beige-color);
+  font-weight: bold;
+  box-shadow: 5px 10px 10px var(--blue-color);
+}
+
+.btn-brown:hover {
+  border: 2px solid var(--gray-color);
+  color: var(--gray-color);
+}
+
 .orange {
   color: var(--orange-color);
 }
@@ -157,14 +180,10 @@ body {
   font-weight: bold;
 }
 
-.btn-brown {
-  background-color: var(--gray-color);
-  color: var(--gold-color);
-}
-
 .hide {
   display: none !important;
 }
+
 
 /* Media queries */
 @media screen and (min-width: 576px) {
