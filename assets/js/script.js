@@ -69,6 +69,9 @@ function showNextQuestion(topic) {
 
     answersElement.innerHTML = "";
 
+    let letters = ["A", "B", "C", "D"];
+        let i = 0;
+
     let answers = quizTopic[randomIndexes[currentIndex]].answers;
     for (let answer of answers) {
         let col = document.createElement("div");
@@ -76,12 +79,14 @@ function showNextQuestion(topic) {
 
         let button = document.createElement("button");
         button.classList.add("answer-btn");
-        button.innerText = answer;
+        button.innerHTML = `<span class="bold">${letters[i]}.</span> ${answer}`;
 
         col.appendChild(button);
         answersElement.appendChild(col);
+
+        i++;
     }
-    progressElement.innerHTML = `<h5>Question ${currentIndex + 1} of ${randomIndexes.length}</h5>`;
+    progressElement.innerHTML = `<h5>Question <span class="orange">${currentIndex + 1}</span>  of <span class="orange">${randomIndexes.length}</span></h5>`;
 
     handleAnswerClick();
 
@@ -113,9 +118,9 @@ function handleAnswerClick() {
             console.log(userAnswer);
             console.log(correct);
             if (userAnswer === correct) {
-                correctAnswers++; 
-            } 
-           
+                correctAnswers++;
+            }
+
             currentIndex++;
             isQuizComplete();
         });

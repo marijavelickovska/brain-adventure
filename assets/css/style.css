@@ -141,6 +141,14 @@ body {
   color: white;
 }
 
+.orange {
+  color: var(--orange-color);
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .hide {
   display: none;
 }
