@@ -62,7 +62,7 @@ function getSelectedQuizTopicArray(topic) {
 function showNextQuestion(topic) {
 
     //let quizTopicQuestions = getSelectedQuizTopicArray(topic); //array of 30
-    let randomIndexes = generateRandomIndexes(); //[27, 6, 10, 8, 24, 2, 12, 3, 26, 18, 9, 19, 21, 1, 23]
+    randomIndexes = generateRandomIndexes(); //[27, 6, 10, 8, 24, 2, 12, 3, 26, 18, 9, 19, 21, 1, 23]
 
     let question = quizTopic[randomIndexes[currentIndex]].question;
     questionElement.innerHTML = `<h2>${question}</h2>`;
@@ -70,7 +70,7 @@ function showNextQuestion(topic) {
     answersElement.innerHTML = "";
 
     let letters = ["A", "B", "C", "D"];
-        let i = 0;
+    let i = 0;
 
     let answers = quizTopic[randomIndexes[currentIndex]].answers;
     for (let answer of answers) {
@@ -116,9 +116,10 @@ function handleAnswerClick() {
             let userAnswer = this.innerText;
             let answerText = userAnswer.split(". ")[1];
             console.log(userAnswer);
+            console.log(answerText);
             console.log(correct);
             if (answerText === correct) {
-                 correctAnswers++;
+                correctAnswers++;
             }
 
             currentIndex++;
@@ -146,8 +147,8 @@ function showScore(correctAnswers) {
     let header = document.querySelector(".header");
     let score = document.querySelector(".score");
     let message = document.querySelector(".message");
-    
-    if(correctAnswers <= 5) {
+
+    if (correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";
         score.innerHTML = `You got only <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
         message.innerHTML = "Don't worry, you can always try again!<span>💪</span>"
@@ -161,4 +162,15 @@ function showScore(correctAnswers) {
         message.innerHTML = "Excellent work!<span>🏆</span>"
     }
 
+}
+
+function playAgain() {
+    document.getElementById("result-container").classList.add("hide");
+    document.getElementById("quiz-container").classList.add("hide");
+    document.getElementById("topic-container").classList.remove("hide");
+
+    topic = null;
+    correctAnswers = 0;
+    currentIndex = 0;
+    randomIndexes = [];
 }

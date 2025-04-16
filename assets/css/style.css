@@ -164,6 +164,7 @@ font-size: 2rem;
   background-color: var(--brown-color);
   color: var(--beige-color);
   font-weight: bold;
+  padding: 0.5rem 1.5rem;
   box-shadow: 5px 10px 10px var(--blue-color);
 }
 
@@ -195,11 +196,13 @@ font-size: 2rem;
   #answers {
     margin-top: 0;
   }
+
 }
 
 @media screen and (min-width: 992px) {
   #topic-container,
-  #quiz-container {
+  #quiz-container,
+  #result-container {
     min-height: 70vh;
     width: 60%;
   }
