@@ -114,13 +114,13 @@ function handleAnswerClick() {
         button.addEventListener("click", function () {
             let correct = quizTopic[randomIndexes[currentIndex]].correct;
             let userAnswer = this.innerText;
-        
+            let answerText = userAnswer.split(". ")[1];
             console.log(userAnswer);
             console.log(correct);
-            if (userAnswer === correct) {
+            if (answerText === correct) {
                  correctAnswers++;
             }
-            
+
             currentIndex++;
             isQuizComplete();
         });
@@ -135,7 +135,6 @@ function isQuizComplete() {
     } else {
         showScore(correctAnswers);
     }
-
 }
 
 function showScore(correctAnswers) {
@@ -150,15 +149,15 @@ function showScore(correctAnswers) {
     
     if(correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";
-        score.innerHTML = `You got only ${correctAnswers} out of 15.`;
+        score.innerHTML = `You got only <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
         message.innerHTML = "Don't worry, you can always try again!<span>💪</span>"
     } else if (correctAnswers <= 10) {
         header.innerHTML = "Good job!";
-        score.innerHTML = `You scored ${correctAnswers} out of 15.`;
+        score.innerHTML = `You scored <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
         message.innerHTML = "Keep practicing!<span>🌟</span>"
     } else {
         header.innerHTML = "Congratulations!";
-        score.innerHTML = `You scored ${correctAnswers} out of 15.`;
+        score.innerHTML = `You scored <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
         message.innerHTML = "Excellent work!<span>🏆</span>"
     }
 
