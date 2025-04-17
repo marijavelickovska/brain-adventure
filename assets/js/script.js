@@ -172,6 +172,9 @@ function showScore(correctAnswers) {
 
 }
 
+document.getElementById("startOver").addEventListener("click", playAgain);
+document.getElementById("playAgain").addEventListener("click", playAgain);
+
 function playAgain() {
     document.getElementById("result-container").classList.add("hide");
     document.getElementById("quiz-container").classList.add("hide");
