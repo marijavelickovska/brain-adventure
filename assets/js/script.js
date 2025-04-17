@@ -169,6 +169,8 @@ function playAgain() {
     document.getElementById("quiz-container").classList.add("hide");
     document.getElementById("topic-container").classList.remove("hide");
 
+    document.body.style.backgroundImage = `url("assets/images/library.webp")`;
+
     topic = null;
     correctAnswers = 0;
     currentIndex = 0;
