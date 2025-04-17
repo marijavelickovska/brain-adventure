@@ -52,17 +52,17 @@ function changeContent(topic) {
     document.body.style.backgroundImage = `url("assets/images/${topic}.webp")`;
 }
 
-function getSelectedQuizTopicArray(topic) {
-    //Code to convert a string value to variable 
-    //let quizTopic;
 
+//Code to convert a string value to variable 
+function getSelectedQuizTopicArray(topic) {
     if (topic === "geography") {
-        return quizTopic = geographyQuiz;
+        quizTopic = geographyQuiz;
     } else if (topic === "history") {
-        return quizTopic = historyQuiz;
+        quizTopic = historyQuiz;
     } else if (topic === "math") {
-        return quizTopic = mathQuiz;
+        quizTopic = mathQuiz;
     }
+    return quizTopic;
 }
 
 
