@@ -115,13 +115,13 @@ function handleAnswerClick() {
             let correct = quizTopic[randomIndexes[currentIndex]].correct;
             let userAnswer = this.innerText;
             let answerText = userAnswer.split(". ")[1];
-            console.log(userAnswer);
-            console.log(answerText);
-            console.log(correct);
+            console.log(userAnswer); // A. Paris
+            console.log(answerText); // Paris
+            console.log(correct); // Paris
             if (answerText === correct) {
                 correctAnswers++;
             }
-
+            console.log(correctAnswers);
             currentIndex++;
             isQuizComplete();
         });
