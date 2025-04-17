@@ -147,7 +147,7 @@ body {
 #startOver button {
   background-color: #435b76;
   color: wheat;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   padding: 0 5rem;
   box-shadow: 5px 10px 10px var(--blue-color);
@@ -163,6 +163,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
 }
 
 .message {

@@ -6,6 +6,8 @@ let currentIndex = 0;
 let randomIndexes = [];
 let quizTopic = [];
 let correctAnswers = 0;
+let resultsUL = document.getElementById("results");
+let resultsList = [];
 
 let questionElement = document.getElementById("showQuestion");
 let answersElement = document.getElementById("answers");
@@ -80,7 +82,9 @@ function showNextQuestion(topic) {
     let letters = ["A", "B", "C", "D"];
     let i = 0;
 
-    let answers = quizTopic[randomIndexes[currentIndex]].answers;
+    let questionAnswers = quizTopic[randomIndexes[currentIndex]].answers;
+    let answers = questionAnswers.sort(() => Math.random() - 0.5);
+
     for (let answer of answers) {
         let col = document.createElement("div");
         col.classList.add("col-12", "col-sm-6", "col-md-5")
@@ -119,21 +123,28 @@ function handleAnswerClick() {
     let buttons = document.getElementsByClassName("answer-btn");
 
     for (let button of buttons) {
-        button.addEventListener("click", function () {
-            let correct = quizTopic[randomIndexes[currentIndex]].correct;
-            let userAnswer = this.innerText;
-            let answerText = userAnswer.split(". ")[1];
-            console.log(userAnswer); // A. Paris
-            console.log(answerText); // Paris
-            console.log(correct); // Paris
-            if (answerText === correct) {
-                correctAnswers++;
-            }
-            console.log(correctAnswers);
-            currentIndex++;
-            isQuizComplete();
-        });
+        button.addEventListener("click", checkIfCorrect);
     }
+}
+
+function checkIfCorrect() {
+    let correct = quizTopic[randomIndexes[currentIndex]].correct;
+    let userAnswer = this.innerText;
+    let answerText = userAnswer.split(". ")[1];
+    let isCorrect = `❌ Wrong (correct: ${correct})`;
+    console.log(userAnswer); // A. Paris
+    console.log(answerText); // Paris
+    console.log(correct); // Paris
+    if (answerText === correct) {
+        correctAnswers++;
+        isCorrect = "✅ Correct";
+    }
+    console.log(correctAnswers);
+
+    resultsList += `<li><strong>${quizTopic[randomIndexes[currentIndex]].question}</strong><br><small>${answerText} was ${isCorrect}</small></li>`;
+
+    currentIndex++;
+    isQuizComplete();
 }
 
 
@@ -155,6 +166,8 @@ function showScore(correctAnswers) {
     let header = document.querySelector(".header");
     let score = document.querySelector(".score");
     let message = document.querySelector(".message");
+
+    resultsUL.innerHTML = resultsList;
 
     if (correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";
