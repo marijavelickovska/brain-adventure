@@ -151,15 +151,15 @@ function showScore(correctAnswers) {
     if (correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";
         score.innerHTML = `You got only <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
-        message.innerHTML = "Don't worry, you can always try again!<span>💪</span>"
+        message.innerHTML = "Don't worry, you can always try again!<span class='emoji'>💪</span>";
     } else if (correctAnswers <= 10) {
         header.innerHTML = "Good job!";
         score.innerHTML = `You scored <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
-        message.innerHTML = "Keep practicing!<span>🌟</span>"
+        message.innerHTML = "Keep practicing!<span class='emoji'>🌟</span>";
     } else {
         header.innerHTML = "Congratulations!";
         score.innerHTML = `You scored <span class="orange">${correctAnswers}</span>  out of <span class="orange">15</span>.`;
-        message.innerHTML = "Excellent work!<span>🏆</span>"
+        message.innerHTML = "Excellent work!<span class='emoji'>🏆</span>";
     }
 
 }
