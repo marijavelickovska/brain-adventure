@@ -144,6 +144,20 @@ body {
   color: white;
 }
 
+#startOver button {
+  background-color: #435b76;
+  color: wheat;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0 5rem;
+  box-shadow: 5px 10px 10px var(--blue-color);
+}
+
+#startOver button:hover {
+  background-color: var(--orange-color);
+  border: 2px solid var(--gray-color);
+}
+
 /* Result container*/
 #result-container {
   flex-direction: column;
@@ -210,6 +224,7 @@ footer {
     margin-top: 0;
   }
 }
+
 
 @media screen and (min-width: 992px) {
   #topic-container,
