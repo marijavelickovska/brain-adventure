@@ -1,4 +1,5 @@
-/* jshint esversion: 11  -  JSHint directive to enable ES11 syntax support*/
+// jshint esversion: 11
+// JSHint directive to enable ES11 syntax support
 
 let topic = null;
 let currentIndex = 0;
@@ -9,25 +10,32 @@ let correctAnswers = 0;
 let questionElement = document.getElementById("showQuestion");
 let answersElement = document.getElementById("answers");
 let progressElement = document.getElementById("showProgress");
+const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByClassName("btn-topicImg");
-    const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
     for (let button of buttons) {
-        button.addEventListener("click", function () {
-            topic = this.getAttribute("data-topic");
-            document.querySelector(".modal-body").innerHTML = `<span>You chose ${topic}. Ready to start?</span>`;
-            modal.show();
-        });
+        button.addEventListener("click", getTopic);
     }
 
-    document.getElementById("confirmBtn").addEventListener("click", function () {
-        modal.hide();
-        startQuiz(topic);
-    });
+    document.getElementById("confirmBtn").addEventListener("click", confirmTopic);
 });
+
+
+function getTopic() {
+    topic = this.getAttribute("data-topic");
+    document.querySelector(".modal-body").innerHTML = `<span>You chose ${topic}. Ready to start?</span>`;
+    modal.show();
+}
+
+
+function confirmTopic() {
+    modal.hide();
+    startQuiz(topic);
+}
+
 
 function startQuiz(topic) {
     changeContent(topic);
