@@ -205,12 +205,22 @@ body {
   #quiz-container,
   #result-container,
   #error-container {
-    min-height: 70vh;
-    width: 60%;
+    min-height: 80vh;
+    width: 70%;
   }
 
   #question,
   #quiz-progress {
     height: 20vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #topic-container,
+  #quiz-container,
+  #result-container,
+  #error-container {
+    min-height: 70vh;
+    width: 60%;
   }
 }
