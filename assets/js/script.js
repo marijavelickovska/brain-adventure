@@ -6,12 +6,12 @@ let currentIndex = 0;
 let randomIndexes = [];
 let quizTopic = [];
 let correctAnswers = 0;
-let resultsUL = document.getElementById("results");
-let resultsList = [];
+let resultsData = [];
 
 let questionElement = document.getElementById("showQuestion");
 let answersElement = document.getElementById("answers");
 let progressElement = document.getElementById("showProgress");
+let resultsTable = document.getElementById("results");
 const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
 
@@ -131,17 +131,18 @@ function checkIfCorrect() {
     let correct = quizTopic[randomIndexes[currentIndex]].correct;
     let userAnswer = this.innerText;
     let answerText = userAnswer.split(". ")[1];
-    let isCorrect = `❌ Wrong (correct: ${correct})`;
-    console.log(userAnswer); // A. Paris
-    console.log(answerText); // Paris
-    console.log(correct); // Paris
+
     if (answerText === correct) {
         correctAnswers++;
-        isCorrect = "✅ Correct";
     }
-    console.log(correctAnswers);
 
-    resultsList += `<li><strong>${quizTopic[randomIndexes[currentIndex]].question}</strong><br><small>${answerText} was ${isCorrect}</small></li>`;
+    resultsData += `<tr>
+                      <td>${currentIndex + 1}</td>
+                      <td>${quizTopic[randomIndexes[currentIndex]].question}</td>
+                      <td>${answerText}</td>
+                      <td>${correct}</td>
+                   </tr>`;
+
 
     currentIndex++;
     isQuizComplete();
@@ -167,7 +168,7 @@ function showScore(correctAnswers) {
     let score = document.querySelector(".score");
     let message = document.querySelector(".message");
 
-    resultsUL.innerHTML = resultsList;
+    resultsTable.innerHTML = resultsData;
 
     if (correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";

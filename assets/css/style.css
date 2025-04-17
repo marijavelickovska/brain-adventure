@@ -37,6 +37,7 @@ body {
   background-image: url("../images/library.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -163,7 +164,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-attachment: fixed;
 }
 
 .message {
@@ -171,6 +171,10 @@ body {
   font-family: var(--tertiary-font);
   font-size: 1rem;
   font-weight: 500;
+}
+
+#results li {
+  list-style: none;
 }
 
 .btn-brown {
