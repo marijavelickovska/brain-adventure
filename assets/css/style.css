@@ -38,6 +38,7 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -169,6 +170,18 @@ body {
   border: 2px solid var(--gray-color);
   color: var(--gray-color);
 }
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 5vh;
+  background-color: white;
+  color: var(--gray-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
 /* Custom classes */
 .orange {
   color: var(--orange-color);
@@ -186,7 +199,6 @@ body {
   font-size: 3rem;
 }
 
-
 /* Media queries */
 @media screen and (min-width: 576px) {
   #question,
@@ -197,7 +209,6 @@ body {
   #answers {
     margin-top: 0;
   }
-
 }
 
 @media screen and (min-width: 992px) {
@@ -215,12 +226,3 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  #topic-container,
-  #quiz-container,
-  #result-container,
-  #error-container {
-    min-height: 70vh;
-    width: 60%;
-  }
-}
