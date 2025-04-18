@@ -48,10 +48,11 @@ body {
 #quiz-container,
 #result-container,
 #error-container {
-  min-height: 90vh;
+  min-height: 80vh;
   overflow-y: auto;
   width: 80%;
   background-color: white;
+  margin: 5vh 0 10vh 0;
   padding: 40px;
   border-radius: 15px;
 }
@@ -148,9 +149,9 @@ body {
 #startOver button {
   background-color: #435b76;
   color: wheat;
-  font-size: 1.25rem;
-  font-weight: 500;
-  padding: 0 5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5 4rem;
   box-shadow: 5px 10px 10px var(--blue-color);
 }
 
@@ -229,6 +230,9 @@ footer {
 .orange {
   color: var(--orange-color);
 }
+.brown {
+  color: #5c4943;
+}
 
 .bold {
   font-weight: bold;
@@ -252,6 +256,13 @@ footer {
   #answers {
     margin-top: 0;
   }
+
+  #startOver button {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0 5rem;
+    
+  }
 }
 
 
@@ -263,6 +274,11 @@ footer {
     min-height: 80vh;
     width: 70%;
   }
+
+  #topic-container {
+    margin: 5vh 0 10vh 0;
+  }
+  
 
   #question,
   #quiz-progress {
