@@ -6,12 +6,11 @@ let currentIndex = 0;
 let randomIndexes = [];
 let quizTopic = [];
 let correctAnswers = 0;
-let resultsData = [];
+
 
 let questionElement = document.getElementById("showQuestion");
 let answersElement = document.getElementById("answers");
 let progressElement = document.getElementById("showProgress");
-let resultsTable = document.getElementById("results");
 const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
 
@@ -132,22 +131,41 @@ function checkIfCorrect() {
     let userAnswer = this.innerText;
     let answerText = userAnswer.split(". ")[1];
 
+
+    let tableBody = document.querySelector("tbody");
+
+    let tr = document.createElement("tr");
+
+    let tdIndex = document.createElement("td");
+    tdIndex.innerText = currentIndex + 1;
+
+    let tdQuestion = document.createElement("td");
+    tdQuestion.innerText = quizTopic[randomIndexes[currentIndex]].question;
+
+    let tdUserAnswer = document.createElement("td");
+    tdUserAnswer.innerText = answerText;
+
+    let tdCorrect = document.createElement("td");
+    tdCorrect.innerText = correct;
+
+    tr.appendChild(tdIndex);
+    tr.appendChild(tdQuestion);
+    tr.appendChild(tdUserAnswer);
+    tr.appendChild(tdCorrect);
+
+
     if (answerText === correct) {
         correctAnswers++;
+        tr.classList.add('correct');
+    } else {
+        tr.classList.add('incorrect');
     }
 
-    resultsData += `<tr>
-                      <td>${currentIndex + 1}</td>
-                      <td>${quizTopic[randomIndexes[currentIndex]].question}</td>
-                      <td>${answerText}</td>
-                      <td>${correct}</td>
-                   </tr>`;
-
+    tableBody.appendChild(tr);
 
     currentIndex++;
     isQuizComplete();
 }
-
 
 
 function isQuizComplete() {
@@ -168,7 +186,6 @@ function showScore(correctAnswers) {
     let score = document.querySelector(".score");
     let message = document.querySelector(".message");
 
-    resultsTable.innerHTML = resultsData;
 
     if (correctAnswers <= 5) {
         header.innerHTML = "Keep trying!";
