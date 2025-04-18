@@ -196,6 +196,12 @@ body {
   border-collapse: collapse;
   margin-top: 2rem;
   font-family: var(--tertiary-font);
+  overflow-x: auto;
+}
+
+.results td {
+  max-height: 30px;
+  overflow-y: auto;
 }
 
 .results-table th, .results-table td {
@@ -211,9 +217,6 @@ body {
 .incorrect {
   background-color: #f8d7da; 
 }
-
-
-
 
 /* Footer */
 footer {
