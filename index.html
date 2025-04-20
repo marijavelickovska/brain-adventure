@@ -96,12 +96,16 @@
 
     <!-- Result conatainer -->
     <div id="result-container" class="text-center hide">
-        <h2 class="header mb-5 display-4"></h2><br>
+        <h2 class="header mb-4 display-4"></h2><br>
         <h3 class="score"></h3>
         <p class="message"></p>
-        <button id="playAgain" class="btn btn-brown fs-5 mt-5">Play Again!</button>
-        <div class="results-table my-5">
-            <h5 class="pb-2">Check Your Answers</h5>
+        <button id="playAgain" class="btn btn-brown fs-5 mt-4">Play Again!</button>
+        <p class="fst-italic fw-medium gray mt-3">Scroll down to check your answers against the correct ones.</p>
+    </div>
+
+    <div class="results-table hide">
+        <h5 class="py-4">Check Your Answers</h5>
+        <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
@@ -116,6 +120,8 @@
             </table>
         </div>
     </div>
+
+
 
 
     <!-- Footer -->

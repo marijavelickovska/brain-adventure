@@ -181,6 +181,8 @@ function showScore(correctAnswers) {
     document.getElementById("quiz-container").classList.add("hide");
     document.getElementById("result-container").classList.remove("hide");
     document.getElementById("result-container").style.display = "flex";
+    document.querySelector(".results-table").classList.remove("hide");
+    document.querySelector(".results-table").style.display = "block";
 
     let header = document.querySelector(".header");
     let score = document.querySelector(".score");
@@ -210,6 +212,7 @@ function playAgain() {
     document.getElementById("result-container").classList.add("hide");
     document.getElementById("quiz-container").classList.add("hide");
     document.getElementById("topic-container").classList.remove("hide");
+    document.querySelector(".results-table").classList.add("hide");
 
     document.body.style.backgroundImage = `url("assets/images/library.webp")`;
 
