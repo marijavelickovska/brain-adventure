@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Trade+Winds&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Trade+Winds&display=swap");
 
 /* CSS Variables */
 :root {
@@ -57,16 +57,26 @@ body {
 }
 
 /* Topic container */
-#topic-container h4 {
-  color: var(--beige-color);
-  background-color: var(--brown-color);
-  padding: 10px 5px;
-  margin-bottom: 0;
-  cursor: pointer;
+.topic-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#topic-container h4:hover {
+.topic-title:hover {
   color: var(--orange-color);
+}
+
+.topic-title {
+  font-family: var(--primary-font);
+  color: var(--beige-color);
+  background-color: var(--brown-color);
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 10px 5px;
+  cursor: pointer;
 }
 
 .btn-topicImg {
@@ -74,10 +84,14 @@ body {
   cursor: pointer;
   margin-bottom: 2rem;
   box-shadow: 5px 10px 15px var(--black-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
 }
 
 .btn-topicImg:hover {
-  border: 4px solid var(--orange-color);
+  outline: 4px solid var(--orange-color);
 }
 
 .btn-topicImg img {
@@ -205,7 +219,7 @@ table {
 
 tr,
 .results-table h5 {
-  border: 3px solid var(--gray-color)
+  border: 3px solid var(--gray-color);
 }
 
 th {
@@ -247,7 +261,7 @@ footer {
 }
 
 .gray {
-  color: var(--gray-color)
+  color: var(--gray-color);
 }
 .brown {
   color: #5c4943;
@@ -281,24 +295,22 @@ footer {
     font-weight: 500;
     padding: 0 5rem;
   }
-
 }
 
 @media screen and (min-width: 768px) {
-th,
-td {
-  display: table-cell;
-}
+  th,
+  td {
+    display: table-cell;
+  }
 
-tr,
-.results-table h5 {
-  border: none;
-}
+  tr,
+  .results-table h5 {
+    border: none;
+  }
 
-.results-table h5 {
-  text-align: center;
-}
-
+  .results-table h5 {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 992px) {
