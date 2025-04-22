@@ -1,5 +1,8 @@
-// Separate objects for each topic, each containing 15 questions
+// jshint esversion: 11
+// JSHint directive to enable ES11 syntax support
 
+
+// Separate objects for each topic, each containing 15 questions
 const geographyQuiz = [
   {
     question: "What is the capital city of France?",
@@ -153,7 +156,6 @@ const geographyQuiz = [
   }
 ];
 
-
 const historyQuiz = [
   {
     question: "Who was the first President of the United States?",
@@ -306,7 +308,6 @@ const historyQuiz = [
     correct: "Philadelphia"
   }
 ];
-
 
 const mathQuiz = [
   {

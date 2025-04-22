@@ -10,8 +10,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-|  | [index.html](https://github.com/marijavelickovska/brain-adventure/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://marijavelickovska.github.io/brain-adventure/index.html) | ![screenshot](documentation/validation/html--index.png) | The warning occurred because the heading was initially empty, but it is dynamically filled with content using JavaScript. |
-|  | [404.html](https://github.com/marijavelickovska/brain-adventure/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://marijavelickovska.github.io/brain-adventure/404.html) | ![screenshot](documentation/validation/html--404.png) | |
+|  | [index.html](https://github.com/marijavelickovska/brain-adventure/blob/main/index.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://marijavelickovska.github.io/brain-adventure/index.html) | ![screenshot](documentation/validation/html-index.png) | The warning occurred because the heading was initially empty, but it is dynamically filled with content using JavaScript. |
+|  | [404.html](https://github.com/marijavelickovska/brain-adventure/blob/main/404.html) | [HTML Validator](https://validator.w3.org/nu/?doc=https://marijavelickovska.github.io/brain-adventure/404.html) | ![screenshot](documentation/validation/html-404.png) | |
 
 
 
@@ -21,37 +21,18 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [style.css](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://marijavelickovska.github.io/brain-adventure) | ![screenshot](documentation/validation/css--validator.png) |  |
+| assets | [style.css](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/css/style.css) | [CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https://marijavelickovska.github.io/brain-adventure) | ![screenshot](documentation/validation/css.png) |  |
 
 
 ### JavaScript
-
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| assets | [dataTopic.js](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/js/dataTopic.js) | N/A | ![screenshot](documentation/validation/js-assets-dataTopic.png) | Notes (if applicable) |
-| assets | [script.js](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/js-assets-script.png) | Notes (if applicable) |
+| assets | [script.js](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/js/script.js) | N/A | ![screenshot](documentation/validation/js-script.png) | The warnings are due to unrecognized variables. This happens because `script.js` imports variables from another file, `dataTopic.js`, which might not be properly linked or loaded during testing. These warnings do not affect the actual functionality when all files are correctly imported in the final environment. |
+| assets | [dataTopic.js](https://github.com/marijavelickovska/brain-adventure/blob/main/assets/js/dataTopic.js) | N/A | ![screenshot](documentation/validation/js-dataTopic.png) | The warnings are for unused variables. These variables are actually used in `script.js` file. |
+
 
 
 ## Responsiveness

@@ -93,7 +93,7 @@ function showNextQuestion(topic) {
 
     for (let answer of answers) {
         let col = document.createElement("div");
-        col.classList.add("col-12", "col-sm-6", "col-md-5")
+        col.classList.add("col-12", "col-sm-6", "col-md-5");
 
         let button = document.createElement("button");
         button.classList.add("answer-btn");
