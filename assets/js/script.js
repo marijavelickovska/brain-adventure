@@ -230,6 +230,7 @@ function playAgain() {
     document.querySelector(".results-table").classList.add("hide");
 
     document.body.style.backgroundImage = `url("assets/images/library.webp")`;
+    document.querySelector("tbody").innerHTML = "";
 
     topic = null;
     correctAnswers = 0;
