@@ -7,7 +7,6 @@ let randomIndexes = [];
 let quizTopic = [];
 let correctAnswers = 0;
 
-
 let questionElement = document.getElementById("showQuestion");
 let answersElement = document.getElementById("answers");
 let progressElement = document.getElementById("showProgress");
@@ -104,9 +103,7 @@ function showNextQuestion(topic) {
 
         i++;
     }
-
     progressElement.innerHTML = `<h5>Question <span class="orange">${currentIndex + 1}</span>  of <span class="orange">${randomIndexes.length}</span></h5>`;
-
     handleAnswerClick();
 }
 
@@ -191,6 +188,9 @@ function isQuizComplete() {
 
 // Based on the number of correct answers, show the corresponding message and the user's score
 function showScore(correctAnswers) {
+    document.body.scrollTop = 0;   // Move view to the top for better user experience on mobile
+    document.documentElement.scrollTop = 0;
+
     document.getElementById("quiz-container").classList.add("hide");
     document.getElementById("result-container").classList.remove("hide");
     document.getElementById("result-container").style.display = "flex";
