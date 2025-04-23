@@ -27,7 +27,7 @@
 
 <body>
     <!-- Topic container with clickable images for choosing the quiz topic-->
-    <div id="topic-container" class="container">
+    <section id="topic-container" class="container">
         <div class="row d-flex justify-content-around align-items-center text-center">
             <div class="col-12 mb-3">
                 <h1 class="display-3">Brain Adventure</h1>
@@ -56,12 +56,12 @@
                 </button>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Modal appears on click of the images, for confirmation to start the quiz -->
     <!-- Modal window is taken from Bootstrap -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+    <aside class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -76,11 +76,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
 
 
     <!-- Quiz container displays each question along with its corresponding answer options -->
-    <div id="quiz-container" class="container hide">
+    <section id="quiz-container" class="container hide">
         <div id="question" class="row text-center">
             <div id="showQuestion" class="col-12 question"></div>
         </div>
@@ -92,18 +92,18 @@
             </div>
 
         </div>
-    </div>
+    </section>
 
     <!-- Result conatainer shows the user's score, along with a table listing all questions, the user's answers, and the correct answers -->
-    <div id="result-container" class="text-center hide">
+    <section id="result-container" class="text-center hide">
         <h2 class="header mb-3 display-4">TBD</h2><br>
         <h3 class="score">TBD</h3>
         <p class="message">TBD</p>
         <button id="playAgain" class="btn btn-brown fs-5 mt-3">Play Again!</button>
         <p class="fst-italic fw-medium gray mt-3">Scroll down to check your answers against the correct ones.</p>
-    </div>
+    </section>
 
-    <div class="results-table hide">
+    <section class="results-table hide">
         <h5 class="py-4">Check Your Answers</h5>
         <div class="table-responsive">
             <table>
@@ -119,7 +119,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </section>
 
 
 
