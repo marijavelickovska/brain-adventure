@@ -59,98 +59,45 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Lighthouse Audit
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports. Avoid testing the local version (Gitpod/VSCode/etc.), as this can have knock-on effects for performance. If you don't have "Lighthouse" in your Developer Tools, it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Unless your project is a single-page application (SPA), you should test Lighthouse Audit results for all of your pages, for both *mobile* and *desktop*.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| Game | ![screenshot](documentation/lighthouse/mobile-game.png) | ![screenshot](documentation/lighthouse/desktop-game.png) |
 | 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
 
 ## Defensive Programming
-
-⚠️ INSTRUCTIONS ⚠️
-
-Defensive programming (defensive design) is extremely important! When building projects that accept user inputs or forms, you should always test the level of security for each form field. Examples of this could include (but not limited to):
-
-All Projects:
-
-- Users cannot submit an empty form (add the `required` attribute)
-- Users must enter valid field types (ensure the correct input `type=""` is used)
-- Users cannot brute-force a URL to navigate to a restricted pages
-
-Python Projects:
-
-- Users cannot perform CRUD functionality if not authenticated (if login functionality exists)
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers/admins
-
-You'll want to test all functionality on your application, whether it's a standard form, or CRUD functionality, for data manipulation on a database. Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser). You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable (can someone else replicate the same outcome?). Ideally, tests cases should focus on each individual section of every page on the website. Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element of the page (eg. button clicks, input box validation, navigation links, etc.) by testing them in their "happy flow", their "bad/exception flow", mentioning the expected and observed results, and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-- Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-⚠️ --- END --- ⚠️
 
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page/Feature | Expectation | Test | Result | Screenshot |
 | --- | --- | --- | --- | --- |
-| Calculator UI | Feature is expected to allow the user to input two numbers and select an operator (`+`, `-`, `*`, `/`). | Entered two numbers and selected each operator to perform calculations. | Calculations for all operators worked as expected. | ![screenshot](documentation/defensive/input-output.png) |
-| | Feature is expected to show an error message if inputs are empty (`NaN`). | Tried submitting calculations with empty input fields. | Error message displayed as expected. | ![screenshot](documentation/defensive/empty-inputs.png) |
-| | Feature is expected to display buttons that are clear, large, and easy to select on all devices. | Verified button sizes and usability across multiple devices (mobile, tablet, desktop). | Buttons were accessible and easy to use on all tested devices. | ![screenshot](documentation/defensive/responsive.png) |
-| | Feature is expected to use high-contrast colors and accessible fonts. | Checked contrast ratios using accessibility tools (e.g., Lighthouse, Wave). | Colors and fonts met accessibility standards. | ![screenshot](documentation/defensive/accessibility.png) |
-| | Feature is expected to have clear labels and instructions for user guidance. | Reviewed labels and instructions for clarity and ease of use. | Labels and instructions were clear and intuitive. | ![screenshot](documentation/defensive/labels-instructions.png) |
-| Instant Calculation | Feature is expected to calculate and display results instantly after selecting an operator. | Selected operators after entering two numbers. | Results were displayed instantly. | ![screenshot](documentation/defensive/calc-speed.png) |
-| Error Handling | Feature is expected to display correct results even if an equation was input incorrectly. | Entered various incorrect equations and verified the results. | Correct results were displayed for all tested cases. | ![screenshot](documentation/defensive/error-handling.png) |
-| Score Tracker | Feature is expected to track the number of correct and incorrect equations. | Performed multiple calculations (correct and incorrect) and checked the score tracker. | Score tracker updated correctly for all tested scenarios. | ![screenshot](documentation/defensive/score-tracker.png) |
+| Home | Feature should display three clickable images | Render the component and verify that three image elements are present and each has a clickable action. | On click, a modal was open as expected. | ![screenshot](documentation/defensive/home.png) |
+| Modal | When an image is clicked, a modal should appear showing the selected topic and a confirmation button to start the quiz. | Click on any of the three images and verify that a modal appears. The modal displays the selected topic and include a confirmation button labeled "Let's go". On button click,  the quiz starts. | The modal opens correctly with the selected topic and a visible confirmation to start the quiz. Works as expected. | ![screenshot](documentation/defensive/modal.png) |
+| Question | Feature is expected to always display a random question from the selected topic. | Start the quiz multiple times with the same topic and verify that the question changes each time, ensuring randomness within the topic scope. | A different question is displayed on each quiz start, all related to the selected topic. | ![screenshot](documentation/defensive/question.png) |
+| Answers | Feature is expected to always display four answers, randomly shuffled so that their positions change each time. | Start the quiz multiple times with the same question and verify that the four answers are present and appear in a different order each time. | All four answers are displayed and their order is randomized on each quiz attempt. Works as expected. | ![screenshot](documentation/defensive/answers.png) |
+| Progress | Feature is expected to show the user’s current question number out of a total of 15 questions. | Start the quiz and verify that the progress indicator updates correctly with each answered question (e.g., “Question 3 of 15”). | The progress is displayed correctly and updates with each question, accurately reflecting the current position out of 15. | ![screenshot](documentation/defensive/answers.png) |
+| Start-over-button | Feature is expected to return the user to the beginning of the quiz when clicked, in case they are not satisfied with their progress. | Start the quiz, answer a few questions, then click the "Start Over" button. Verify that the quiz resets completely - the home page is shown. | On click, the quiz restarts from the beginning | ![screenshot](documentation/defensive/start-over-button.png) |
+| Message-first | Feature is expected to display a message based on the user's score. Depending on whether the user correctly answers at least 5, 10, or 13 out of 15 questions, a different message should appear. | Complete the quiz multiple times with different score ranges (e.g., 5/15, 10/15, 13/15) and verify that the corresponding message is displayed accurately based on the score thresholds. | A specific message is shown based on the score | ![screenshot](documentation/defensive/message-first.png) |
+| Score | Feature is expected to display the user’s score at the end of the quiz. | Complete the quiz and verify that the final score is displayed correctly, showing the number of correct answers out of 15. | The correct score is shown at the end of the quiz (e.g., “You scored 11 out of 15”). | ![screenshot](documentation/defensive/score.png) |
+| Message-second | Feature is expected to display a message based on the user's score. Depending on whether the user correctly answers at least 5, 10, or 13 out of 15 questions, a different message should appear. | Complete the quiz multiple times with different score ranges (e.g., 5/15, 10/15, 13/15) and verify that the corresponding message is displayed accurately based on the score thresholds. | A specific message is shown based on the score | ![screenshot](documentation/defensive/message-second.png) |
+| Play-again-button | Feature is expected to start the quiz again when clicked. | After completing the quiz, click the "Play Again" button and verify that the quiz restarts from the beginning, resetting progress and answers. | The quiz restarts and all previous answers and progress are cleared. | ![screenshot](documentation/defensive/play-again-button.png) |
+| Results | Feature is expected to display all the questions with the user’s answer and the correct answer. Correctly answered questions should be highlighted in green, and incorrect ones in red. | After completing the quiz, check the results page to verify that all questions are listed with the user’s answer and the correct answer. Verify that the correct answers are colored green and the incorrect ones are colored red. |  The results page shows as expected | ![screenshot](documentation/defensive/results.png) |
 | 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`) to test error handling. | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+| Go-home-button | Feature is expected to take the user to the home page when clicked. | Click the "Go Home" button and verify that the user is redirected to the home page. | The user is successfully redirected to the home page. | ![screenshot](documentation/defensive/go-home-button.png) |
 
 ## User Story Testing
 
-⚠️ INSTRUCTIONS ⚠️
-
-Testing User Stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **Features** should already align with the **User Stories**, so this should be as simple as creating a table with the User Story, matching with the re-used screenshot from the respective Feature.
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome | Screenshot |
 | --- | --- | --- | --- |
-| As a user | I would like to input two numbers and select an operator (`+`, `-`, `*`, `/`) | so that I can calculate a result. | ![screenshot](documentation/features/feature01.png) |
-| As a user | I would like the application to show me an error message if I enter empty input (`NaN`) | so that I understand what went wrong. | ![screenshot](documentation/features/feature02.png) |
-| As a user | I would like the calculation to happen instantly after I select an operator | so that I get my result quickly without waiting. | ![screenshot](documentation/features/feature03.png) |
-| As a user | I would like the application to have clear and large buttons for each operator | so that I can easily select the correct one on any device. | ![screenshot](documentation/features/feature04.png) |
-| As a user | I would like the application to have high-contrast colors and accessible fonts | so that I can easily read and interact with it. | ![screenshot](documentation/features/feature05.png) |
-| As a user | I would like clear labels and instructions | so that I understand how to use the app without confusion. | ![screenshot](documentation/features/feature06.png) |
-| As a user | I would like the app to show me the correct result if my equation was incorrect | so that I understand how the answer was calculated. | ![screenshot](documentation/features/feature07.png) |
-| As a user | I would like to see how many equations I get correct or incorrect | so I can push myself to improve my math skills. | ![screenshot](documentation/features/feature08.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature09.png) |
+| As a user | I want to easily start the quiz | so I can begin answering questions right away | ![screenshot](documentation/features/topics.png) |
+| As a user | I want each question to appear one at a time | so I don’t get overwhelmed | ![screenshot](documentation/features/math-quiz.png) |
+| As a user | I want to choose one correct answer from multiple options | so I don't have to type | ![screenshot](documentation/features/answers.png) |
+| As a user | I don't want the quiz to show me if my answer is correct during the quiz | so I stay curious and focused | ![screenshot](documentation/features/quiz-progress.png) |
+| As a user | I want to see which answers I got wrong and the correct ones at the end | so I can learn from my mistakes | ![screenshot](documentation/features/results.png) |
+| As a user | I want to get a final score and a short message at the end | so I know how well I did | ![screenshot](documentation/features/score.png) | 
+| As a user | I want the quiz to have a good design with a background image | so that it matches the quiz theme and keeps me visually engaged | ![screenshot](documentation/features/quiz.png) |
+
 
 ## Bugs
 
