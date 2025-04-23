@@ -47,7 +47,6 @@ body {
 #quiz-container,
 #result-container,
 #error-container {
-  min-height: 80vh;
   overflow-y: auto;
   width: 80%;
   background-color: white;
@@ -256,6 +255,15 @@ footer {
   bottom: 0;
 }
 
+footer a {
+  text-decoration: none;
+  color: var(--orange-color);
+}
+
+footer a:hover {
+  color: var(--gray-color);
+}
+
 /* Custom classes */
 .orange {
   color: var(--orange-color);
@@ -327,7 +335,6 @@ footer {
   #quiz-container,
   #result-container,
   #error-container {
-    min-height: 80vh;
     width: 70%;
   }
 
