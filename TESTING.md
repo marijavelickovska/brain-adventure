@@ -109,7 +109,7 @@ I've used [GitHub Issues](https://www.github.com/marijavelickovska/brain-adventu
 
 All previously closed/fixed bugs can be tracked [here](https://www.github.com/marijavelickovska/brain-adventure/issues?q=is%3Aissue+is%3Aclosed+label%3Abug).
 
-![screenshot](documentation/bugs/gh-issues-closed.png)
+![screenshot](documentation/issues/issues-fixed.png)
 
 ### Unfixed Bugs
 
@@ -117,13 +117,11 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/ma
 
 Any remaining open issues can be tracked [here](https://www.github.com/marijavelickovska/brain-adventure/issues).
 
-![screenshot](documentation/bugs/gh-issues-open.png)
-
 ### Known Issues
 
 | Issue | Screenshot |
 | --- | --- |
-| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
+| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/validation/html-index.png) |
 
 > [!IMPORTANT]
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
