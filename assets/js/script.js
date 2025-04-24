@@ -139,7 +139,7 @@ function checkIfCorrect() {
     let userAnswer = this.innerText;
     let answerText = userAnswer.split(". ")[1]; //Splits the actual user answer from the letters before the answer
 
-// Update the table with the question, user answer, and correct answer
+// Update the table with the question, user answer and correct answer
     let tableBody = document.querySelector("tbody");
 
     let tr = document.createElement("tr");
